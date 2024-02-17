@@ -653,3 +653,7 @@ h3.my-profession{
         max-width: 100%;
     }
 }
+/*========Extra=======*/
+.nav li a.active {
+    color: #ff0000;
+}
