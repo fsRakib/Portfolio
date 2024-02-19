@@ -57,7 +57,7 @@
     border-radius: 50%;
 }
 .style-switcher .color-1{
-    background: #ec1839;
+    background: #FF10F0;
 }
 .style-switcher .color-2{
     background: #FF5F1F;
@@ -69,5 +69,5 @@
     background: #04d9ff;
 }
 .style-switcher .color-5{
-    background: #FF10F0;
+    background: #ec1839;
 }
