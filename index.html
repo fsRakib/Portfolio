@@ -1,542 +1,1296 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio(Rakib)</title>
     <!--===== CSS Files ======-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/skins/color-1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/skins/color-1.css" />
+    <link rel="stylesheet" href="css/style-switcher.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <!--===== Style Switcher ======-->
-    <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1"> //disabled
-    <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
-    <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
-    <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
-    <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
-    <link rel="stylesheet" href="css/style-switcher.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="css/skins/color-1.css"
+      class="alternate-style"
+      title="color-1"
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/color-2.css"
+      class="alternate-style"
+      title="color-2"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/color-3.css"
+      class="alternate-style"
+      title="color-3"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/color-4.css"
+      class="alternate-style"
+      title="color-4"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="css/skins/color-5.css"
+      class="alternate-style"
+      title="color-5"
+      disabled
+    />
+  </head>
 
-<body class="dark">
+  <body class="dark">
+    <!-- Metadata Backdrop -->
+    <div class="metadata-backdrop" id="metadataBackdrop"></div>
+
+    <!-- Campus Connect Modal -->
+    <div class="external-metadata" id="campus-connect-modal">
+      <button class="close-btn" onclick="closeProjectDetails()">&times;</button>
+      <img
+        src="images/portfolio/portfolio-1.jpg"
+        alt="Campus Connect"
+        class="project-image"
+      />
+      <h4 class="metadata-title">Campus Connect</h4>
+      <p class="metadata-description">
+        A comprehensive social platform designed to connect students within
+        campus communities. Features include real-time messaging, event
+        planning, study groups, and academic resource sharing.
+      </p>
+      <div class="metadata-tech">
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">MongoDB</span>
+        <span class="tech-tag">Socket.io</span>
+        <span class="tech-tag">Express</span>
+      </div>
+      <div class="metadata-links">
+        <a href="https://github.com/fsRakib/Campus_Connect.git" class="btn-link"
+          >View Code</a
+        >
+        <a href="#" class="btn-link secondary">Live Demo</a>
+      </div>
+    </div>
+
+    <!-- Portfolio Website Modal -->
+    <div class="external-metadata" id="portfolio-website-modal">
+      <button class="close-btn" onclick="closeProjectDetails()">&times;</button>
+      <img
+        src="images/portfolio/portfolio-2.jpg"
+        alt="Portfolio Website"
+        class="project-image"
+      />
+      <h4 class="metadata-title">Portfolio Website</h4>
+      <p class="metadata-description">
+        A modern, responsive personal portfolio website showcasing projects,
+        skills, and achievements. Built with performance optimization and SEO
+        best practices in mind.
+      </p>
+      <div class="metadata-tech">
+        <span class="tech-tag">HTML5</span>
+        <span class="tech-tag">CSS3</span>
+        <span class="tech-tag">JavaScript</span>
+        <span class="tech-tag">Responsive Design</span>
+        <span class="tech-tag">SEO</span>
+      </div>
+      <div class="metadata-links">
+        <a href="#" class="btn-link">View Live</a>
+        <a href="#" class="btn-link secondary">Source Code</a>
+      </div>
+    </div>
+
+    <!-- Visual Chat Modal -->
+    <div class="external-metadata" id="visual-chat-modal">
+      <button class="close-btn" onclick="closeProjectDetails()">&times;</button>
+      <img
+        src="images/portfolio/portfolio-3.jpg"
+        alt="Visual Chat"
+        class="project-image"
+      />
+      <h4 class="metadata-title">Visual Chat</h4>
+      <p class="metadata-description">
+        A real-time video chat application with modern UI/UX design. Features
+        include screen sharing, file transfer, group video calls, and integrated
+        messaging system.
+      </p>
+      <div class="metadata-tech">
+        <span class="tech-tag">WebRTC</span>
+        <span class="tech-tag">Socket.io</span>
+        <span class="tech-tag">Express</span>
+        <span class="tech-tag">Node.js</span>
+        <span class="tech-tag">WebSocket</span>
+      </div>
+      <div class="metadata-links">
+        <a href="https://github.com/fsRakib/Visual_Chat.git" class="btn-link"
+          >View Code</a
+        >
+        <a href="#" class="btn-link secondary">Try Demo</a>
+      </div>
+    </div>
+
+    <!-- E-Commerce Platform Modal -->
+    <div class="external-metadata" id="ecommerce-platform-modal">
+      <button class="close-btn" onclick="closeProjectDetails()">&times;</button>
+      <img
+        src="images/portfolio/portfolio-1.jpg"
+        alt="E-Commerce Platform"
+        class="project-image"
+      />
+      <h4 class="metadata-title">E-Commerce Platform</h4>
+      <p class="metadata-description">
+        A full-stack e-commerce solution with payment integration, inventory
+        management, user authentication, and admin dashboard. Includes order
+        tracking and email notifications.
+      </p>
+      <div class="metadata-tech">
+        <span class="tech-tag">Django</span>
+        <span class="tech-tag">PostgreSQL</span>
+        <span class="tech-tag">Stripe</span>
+        <span class="tech-tag">Redis</span>
+        <span class="tech-tag">Docker</span>
+      </div>
+      <div class="metadata-links">
+        <a href="#" class="btn-link">View Code</a>
+        <a href="#" class="btn-link secondary">Live Demo</a>
+      </div>
+    </div>
+
+    <!-- Task Management Modal -->
+    <div class="external-metadata" id="task-management-modal">
+      <button class="close-btn" onclick="closeProjectDetails()">&times;</button>
+      <img
+        src="images/portfolio/portfolio-2.jpg"
+        alt="Task Management App"
+        class="project-image"
+      />
+      <h4 class="metadata-title">Task Management App</h4>
+      <p class="metadata-description">
+        A collaborative task management application with real-time updates, team
+        collaboration features, deadline tracking, and progress visualization
+        charts.
+      </p>
+      <div class="metadata-tech">
+        <span class="tech-tag">Vue.js</span>
+        <span class="tech-tag">Firebase</span>
+        <span class="tech-tag">PWA</span>
+        <span class="tech-tag">Vuex</span>
+        <span class="tech-tag">Chart.js</span>
+      </div>
+      <div class="metadata-links">
+        <a href="#" class="btn-link">View Demo</a>
+        <a href="#" class="btn-link secondary">Source Code</a>
+      </div>
+    </div>
+
+    <!-- Weather Dashboard Modal -->
+    <div class="external-metadata" id="weather-dashboard-modal">
+      <button class="close-btn" onclick="closeProjectDetails()">&times;</button>
+      <img
+        src="images/portfolio/portfolio-3.jpg"
+        alt="Weather Dashboard"
+        class="project-image"
+      />
+      <h4 class="metadata-title">Weather Dashboard</h4>
+      <p class="metadata-description">
+        An interactive weather application with location-based forecasts,
+        detailed weather maps, 7-day predictions, and customizable alerts for
+        weather conditions.
+      </p>
+      <div class="metadata-tech">
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">API Integration</span>
+        <span class="tech-tag">Charts.js</span>
+        <span class="tech-tag">Geolocation</span>
+        <span class="tech-tag">PWA</span>
+      </div>
+      <div class="metadata-links">
+        <a href="#" class="btn-link">View Code</a>
+        <a href="#" class="btn-link secondary">Try App</a>
+      </div>
+    </div>
+
+    <!-- AI Learning Platform Modal -->
+    <div class="external-metadata" id="ai-learning-modal">
+      <button class="close-btn" onclick="closeProjectDetails()">&times;</button>
+      <img
+        src="images/portfolio/portfolio-1.jpg"
+        alt="AI Learning Platform"
+        class="project-image"
+      />
+      <h4 class="metadata-title">AI Learning Platform</h4>
+      <p class="metadata-description">
+        A machine learning education platform with interactive tutorials,
+        hands-on coding exercises, model training simulators, and progress
+        tracking for students.
+      </p>
+      <div class="metadata-tech">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">TensorFlow</span>
+        <span class="tech-tag">Flask</span>
+        <span class="tech-tag">Jupyter</span>
+        <span class="tech-tag">Scikit-learn</span>
+      </div>
+      <div class="metadata-links">
+        <a href="#" class="btn-link">View Code</a>
+        <a href="#" class="btn-link secondary">Live Platform</a>
+      </div>
+    </div>
+
+    <!-- Blockchain Wallet Modal -->
+    <div class="external-metadata" id="blockchain-wallet-modal">
+      <button class="close-btn" onclick="closeProjectDetails()">&times;</button>
+      <img
+        src="images/portfolio/portfolio-2.jpg"
+        alt="Blockchain Wallet"
+        class="project-image"
+      />
+      <h4 class="metadata-title">Blockchain Wallet</h4>
+      <p class="metadata-description">
+        A secure cryptocurrency wallet with multi-chain support, transaction
+        history, portfolio tracking, and integration with major blockchain
+        networks including Ethereum and Bitcoin.
+      </p>
+      <div class="metadata-tech">
+        <span class="tech-tag">Web3.js</span>
+        <span class="tech-tag">Ethereum</span>
+        <span class="tech-tag">Solidity</span>
+        <span class="tech-tag">MetaMask</span>
+        <span class="tech-tag">React</span>
+      </div>
+      <div class="metadata-links">
+        <a href="#" class="btn-link">View Demo</a>
+        <a href="#" class="btn-link secondary">Source Code</a>
+      </div>
+    </div>
+
     <!--===== Main Container Start =====-->
     <div class="main-container">
-        <!--===== Aside Start =====-->
-        <div class="aside">
-            <div class="logo">
-                <a href="#"><span>R</span>akib</a>
-            </div>
-            <div class="nav-toggler">
-                <span>
-                </span>
-            </div>
-            <ul class="nav">
-                <li><a href="#home" class="active"><i class="fa fa-home"></i> Home</a></li>
-                <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
-                <li><a href="#services"><i class="fa fa-list"></i> Services</a></li>
-                <li><a href="#portfolio"><i class="fa fa-briefcase"></i> Portfolio</a></li>
-                <li><a href="#contact"><i class="fa fa-home"></i> Contact</a></li>
-            </ul>
+      <!--===== Aside Start =====-->
+      <div class="aside">
+        <div class="logo">
+          <a href="#"><span>R</span>akib</a>
         </div>
-        <!--===== Aside End =====-->
-        <!--===== Main Content Start =====-->
-        <div class="main-content">
-            <!-- ===== Home Section Start ===== -->
-            <section class="home section" id="home">
-                <div class="container">
-                    <div class="row">
-                        <div class="home-info padd-15">
-                            <h3 class="hello">Hello, my name is <span class="name">Md. Rakibul Kabir</span></h3>
-                            <h3 class="my-professiom">I'm a <span class="typing">Student</span></h3>
-                            <p>I'm a student of Software Engineering at Shahjalal University of Science & Technology
-                                (SUST), Sylhet.</p>
-                            <a href="#contact" class="btn hire-me">Hire Me</a>
-                        </div>
-                        <div class="home-img padd-15">
-                            <img src="images/hero.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--===== Home Section End =====-->
-            <!--===== About Section Start =====-->
-            <section class="about section" id="about">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>About Me</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="about-content padd-15">
-                            <div class="row">
-                                <div class="about-text padd-15">
-                                    <h3>I'm Md. Rakibul Kabir and a <span>Student</span></h3>
-                                    <p>Hi I'm Rakib a university student pursuing graduation with a passion for software
-                                        engineering. Committed to academic excellence, I thrive in challenging
-                                        environments that encourage critical thinking, creativity, and problem-solving.
-                                        With a keen interest in programing, developing applications actively seek
-                                        opportunities to expand my knowledge and skills both inside and outside the
-                                        classroom.</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="personal-info padd-15">
-                                    <div class="row">
-                                        <div class="info-item padd-15">
-                                            <p>Birthday : <span>7th April 2002</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Age : <span>21</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Website : <span>www.domain.com</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>E-mail : <span>fsrakiba50@gmail.com</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Degree : <span>Software Engineering</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Phone : <span>+8801888166570</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>City : <span>Dhaka</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Freelance : <span>Available</span></p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="buttons padd-15">
-                                            <a href="CV.pdf" class="btn">Download CV</a>
-                                            <a href="#contact" class="btn hire-me">Hire Me</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="skills padd-15">
-                                    <div class="row">
-                                        <div class="skill-item padd-15">
-                                            <h5>C/C++</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 80%;"></div>
-                                                <div class="skill-percent">80%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>JAVA</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 50%;"></div>
-                                                <div class="skill-percent">50%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>DART</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 40%;"></div>
-                                                <div class="skill-percent">40%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>CSS</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 76%;"></div>
-                                                <div class="skill-percent">76%</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="education padd-15">
-                                    <h3 class="title">Education</h3>
-                                    <div class="row">
-                                        <div class="timeline-box padd-15">
-                                            <div class="timeline shadow-dark">
-                                                <!--===== timeline item =====-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2020 - present
-                                                    </h3>
-                                                    <h4 class="timeline-title">Shahjalal University of Science and
-                                                        Technology (SUST), Sylhet</h4>
-                                                    <p class="timeline-text"> I'm currently studying <strong>"Software
-                                                            Engineering"</strong>
-                                                        at SUST. Now I'm in my 3rd year, 1st semester. In
-                                                        my curriculum I'm gathering some knowledge about software
-                                                        industry. And I feel great to get the opportunity to be a
-                                                        student at SUST.</p>
-                                                </div>
-                                                <!--===== timeline item =====-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2018 - 2020
-                                                    </h3>
-                                                    <h4 class="timeline-title">Jatir Janak Bangabandhu Sheikh Mujibur
-                                                        Rahman Government College, Airport, Uttara, Dhaka</h4>
-                                                    <p class="timeline-text">I studied in the <strong>"Science"</strong>
-                                                        section of my
-                                                        college. I took my HSC exam from the Dhaka Board. And passed
-                                                        with a GPA of 5. Although my college life was short, I attended
-                                                        various olympiads, science fairs, and events with my friends.
-                                                    </p>
-                                                </div>
-                                                <!--===== timeline item =====-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2016 - 2018
-                                                    </h3>
-                                                    <h4 class="timeline-title">Uttarkhan Govt. Secondary School,
-                                                        Uttarkhan, Dhaka</h4>
-                                                    <p class="timeline-text">I have studied in the
-                                                        <strong>"Science"</strong> section in my
-                                                        school life. I took the SSC exam from the Dhaka Board. And
-                                                        passed with a GPA of 5. During my long school life, I used to
-                                                        study with my friends, play sports, and joke a lot.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="experience padd-15">
-                                    <h3 class="title">Experience</h3>
-                                    <div class="row">
-                                        <div class="timeline-box padd-15">
-                                            <div class="timeline shadow-dark">
-                                                <!--===== timeline item =====-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2024
-                                                    </h3>
-                                                    <h4 class="timeline-title">Research assistant at "WoNBias"</h4>
-                                                    <p class="timeline-text">WoNBias: A Dataset for Classifying Bias &
-                                                        Prejudice Against Women in Bengali Text. I helped my university
-                                                        senior with his thesis work. Basically, he needed a lot of data
-                                                        for his research work. I used to collect data from various
-                                                        sources. And it took a long time to complete the task. Later,
-                                                        based on my data, he created a data set for his thesis work.
-                                                    </p>
-                                                </div>
-                                                <!--===== timeline item =====-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2023
-                                                    </h3>
-                                                    <h4 class="timeline-title">Build "Campus Connect" Android App</h4>
-                                                    <p class="timeline-text">I made a chat application when I was in my
-                                                        second year of university. Where the JAVA language was used and
-                                                        Firebase Firestore was used as a database. This is the first
-                                                        Android app I made. It works like a real chat application.</p>
-                                                </div>
-                                                <!--===== timeline item =====-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2023
-                                                    </h3>
-                                                    <h4 class="timeline-title">Volunteer at "Technovent"</h4>
-                                                    <p class="timeline-text">It was an Inter University Programming
-                                                        Contest during my first year of university. I worked as a
-                                                        volunteer. Talented programmers from many universities
-                                                        participated in the competition here. We have worked our best to
-                                                        conduct the event smoothly.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--===== About Section End =====-->
-            <!-- ===== Services Section Start ===== -->
-            <section class="service section" id="services">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Services</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- ===== Service item Start ===== -->
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-mobile-alt"></i>
-                                </div>
-                                <h4>Android Development</h4>
-                                <p>I can design and build best and cross platform application for you.</p>
-                            </div>
-                        </div>
-                        <!-- ===== Service item End ===== -->
-                        <!-- ===== Service item Start ===== -->
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-laptop-code"></i>
-                                </div>
-                                <h4>Web Design</h4>
-                                <p>I can design beautiful and responsive web application for you.</p>
-                            </div>
-                        </div>
-                        <!-- ===== Service item End ===== -->
-                        <!-- ===== Service item Start ===== -->
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-palette"></i>
-                                </div>
-                                <h4>Writing blog</h4>
-                                <p>I can write creative and scientific blog for you.</p>
-                            </div>
-                        </div>
-                        <!-- ===== Service item End ===== -->
-                        <!-- ===== Service item Start ===== -->
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-code"></i>
-                                </div>
-                                <h4>Programing</h4>
-                                <p>I can implement basic programming and solve basic problem for you.</p>
-                            </div>
-                        </div>
-                        <!-- ===== Service item End ===== -->
-                        <!-- ===== Service item Start ===== -->
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-search"></i>
-                                </div>
-                                <h4>WoNBias Data Collection</h4>
-                                <p>I can collect data from various sorces for you.</p>
-                            </div>
-                        </div>
-                        <!-- ===== Service item End ===== -->
-                        <!-- ===== Service item Start ===== -->
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-bullhorn"></i>
-                                </div>
-                                <h4>Volunteer</h4>
-                                <p>I can also do some volunteering work for you.</p>
-                            </div>
-                        </div>
-                        <!-- ===== Service item End ===== -->
-                    </div>
-                </div>
-            </section>
-            <!-- ===== Services Section End ===== -->
-            <!-- ===== Portfolio Section Start ===== -->
-            <section class="portfolio section" id="portfolio">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Portfolio</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="portfolio-heading padd-15">
-                            <h2>My Last Projects :</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- ===== portfolio item start ===== -->
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img"><a href="https://github.com/fsRakib/Campus_Connect.git">
-                                        <img src="images/portfolio/portfolio-1.jpg" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="portfolio-info">
-                                <h4 class="portfolio-title">Capmus Connect</h4>
-                            </div>
-                        </div>
-                        <!-- ===== portfolio item end ===== -->
-                        <!-- ===== portfolio item start ===== -->
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="images/portfolio/portfolio-2.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="portfolio-info">
-                                <h4 class="portfolio-title">Portfolio Website</h4>
-                            </div>
-                        </div>
-                        <!-- ===== portfolio item end ===== -->
-                        <!-- ===== portfolio item start ===== -->
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img"><a href="https://github.com/fsRakib/Visual_Chat.git">
-                                        <img src="images/portfolio/portfolio-3.jpg" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="portfolio-info">
-                                <h4 class="portfolio-title">Visual Chat
-                                </h4>
-                            </div>
-                        </div>
-                        <!-- ===== portfolio item end ===== -->
-                        <!-- ===== portfolio item start ===== -->
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img"><a href="https://github.com/Saikat-too/Pacman.git">
-                                        <img src="images/portfolio/portfolio-4.jpg" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="portfolio-info">
-                                <h4 class="portfolio-title">Pacman</h4>
-                            </div>
-                        </div>
-                        <!-- ===== portfolio item end ===== -->
-                        <!-- ===== portfolio item start ===== -->
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img"><a
-                                        href="https://github.com/Raisul191491/Gender-Bias-Filtering-csebuetnlp-Banglabert.git">
-                                        <img src="images/portfolio/portfolio-5.jpg" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="portfolio-info">
-                                <h4 class="portfolio-title">WoNBias Data collection</h4>
-                            </div>
-                        </div>
-                        <!-- ===== portfolio item end ===== -->
-                        <!-- ===== portfolio item start ===== -->
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img"><a href="https://github.com/fsRakib/Game-Project-SWE-.git">
-                                        <img src="images/portfolio/portfolio-6.jpg" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="portfolio-info">
-                                <h4 class="portfolio-title">Car Racing</h4>
-                            </div>
-                        </div>
-                        <!-- ===== portfolio item end ===== -->
-                    </div>
-                </div>
-            </section>
-            <!-- ===== Portfolio Section End ===== -->
-            <!-- ===== Contact Section Start ===== -->
-            <section class="contact section" id="contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Contact Me</h2>
-                        </div>
-                    </div>
-                    <h3 class="contact-title padd-15">Have You Any Question ?</h3>
-                    <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICES</h4>
-                    <div class="row">
-                        <!-- ===== Contact info item start ===== -->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-phone"></i></div>
-                            <h4>Call Us On</h4>
-                            <p>+880 1888166570</p>
-                        </div>
-                        <!-- ===== Contact info item end ===== -->
-                        <!-- ===== Contact info item start ===== -->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><a href="https://www.linkedin.com/in/md-rakibul-kabir-26333428a/"><i
-                                        class="fa fa-brands fa-linkedin"></i></a></div>
-                            <h4>LinkedIn</h4>
-                            <p>Rakib</p>
-                        </div>
-                        <!-- ===== Contact info item end ===== -->
-                        <!-- ===== Contact info item start ===== -->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-envelope"></i></div>
-                            <h4>Email</h4>
-                            <p>fsrakiba50@gmail.com</p>
-                        </div>
-                        <!-- ===== Contact info item end ===== -->
-                        <!-- ===== Contact info item start ===== -->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><a href="https://www.facebook.com/fsrakib205"><i
-                                        class="fa fa-brands fa-facebook"></i></a></div>
-                            <h4>Facebook</h4>
-                            <p>fsRakib</p>
-                        </div>
-                        <!-- ===== Contact info item end ===== -->
-                    </div>
-                    <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
-                    <h4 class="contact-sub-title padd-15">I'M VERY RESPONSIVE TO MESSAGE</h4>
-                    <!-- ===== Contact Form ===== -->
-                    <form action="https://api.web3forms.com/submit" method="POST">
-                        <div class="row">
-                            <input type="hidden" name="access_key" value="65f330a7-ac4a-40fd-a5d0-7f1b6bc8bb3e">
-                            <div class="contact-form padd-15">
-                                <div class="row">
-                                    <div class="form-item col-6 padd-15">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="name" placeholder="Name">
-                                        </div>
-                                    </div>
-                                    <div class="form-item col-6 padd-15">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" name="email" placeholder="Email">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form-item col-12 padd-15">
-                                        <div class="form-group">
-                                            <textarea name="message" class="form-control" id="" placeholder="Message"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form-item col-12 padd-15">
-                                        <button type="submit" class="btn">Send Message</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>                    
-                </div>
-            </section>
-            <!-- ===== Contact Section End ===== -->
+        <div class="nav-toggler">
+          <span> </span>
         </div>
-        <!--===== Main Content End =====-->
+        <ul class="nav">
+          <li>
+            <a href="#home" class="active"><i class="fa fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="#about"><i class="fa fa-user"></i> About</a>
+          </li>
+          <li>
+            <a href="#skills"><i class="fa fa-cogs"></i> Skills</a>
+          </li>
+          <li>
+            <a href="#portfolio"><i class="fa fa-briefcase"></i> Projects</a>
+          </li>
+          <li>
+            <a href="#contact"><i class="fa fa-home"></i> Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!--===== Aside End =====-->
+      <!--===== Main Content Start =====-->
+      <div class="main-content">
+        <!-- ===== Home Section Start ===== -->
+        <section class="home section" id="home">
+          <div class="container">
+            <div class="row">
+              <div class="home-info padd-15">
+                <h3 class="hello">
+                  Hello, my name is <span class="name">Md. Rakibul Kabir</span>
+                </h3>
+                <h3 class="my-professiom">
+                  I'm a <span class="typing">Student</span>
+                </h3>
+                <p>
+                  I'm a student of Software Engineering at Shahjalal University
+                  of Science & Technology (SUST), Sylhet.
+                </p>
+                <a href="#contact" class="btn hire-me">Hire Me</a>
+              </div>
+              <div class="home-img padd-15">
+                <img src="images/hero.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--===== Home Section End =====-->
+        <!--===== About Section Start =====-->
+        <section class="about section" id="about">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2>About Me</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="about-content padd-15">
+                <div class="row">
+                  <div class="about-text padd-15">
+                    <h3>I'm Md. Rakibul Kabir and a <span>Student</span></h3>
+                    <p>
+                      Hi I'm Rakib a university student pursuing graduation with
+                      a passion for software engineering. Committed to academic
+                      excellence, I thrive in challenging environments that
+                      encourage critical thinking, creativity, and
+                      problem-solving. With a keen interest in programing,
+                      developing applications actively seek opportunities to
+                      expand my knowledge and skills both inside and outside the
+                      classroom.
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="personal-info padd-15">
+                    <div class="row">
+                      <div class="info-item padd-15">
+                        <p>Birthday : <span>7th April 2002</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Age : <span>21</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Website : <span>www.domain.com</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>E-mail : <span>fsrakiba50@gmail.com</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Degree : <span>Software Engineering</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Phone : <span>+8801888166570</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>City : <span>Dhaka</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Freelance : <span>Available</span></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="buttons padd-15">
+                        <a href="CV.pdf" class="btn">Download CV</a>
+                        <a href="#contact" class="btn hire-me">Hire Me</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skills padd-15">
+                    <div class="row">
+                      <div class="skill-item padd-15">
+                        <h5>C/C++</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 80%"></div>
+                          <div class="skill-percent">80%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>JAVA</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 50%"></div>
+                          <div class="skill-percent">50%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>DART</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 40%"></div>
+                          <div class="skill-percent">40%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>CSS</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 76%"></div>
+                          <div class="skill-percent">76%</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="education padd-15">
+                    <h3 class="title">Education</h3>
+                    <div class="row">
+                      <div class="timeline-box padd-15">
+                        <div class="timeline shadow-dark">
+                          <!--===== timeline item =====-->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2020 - present
+                            </h3>
+                            <h4 class="timeline-title">
+                              Shahjalal University of Science and Technology
+                              (SUST), Sylhet
+                            </h4>
+                            <p class="timeline-text">
+                              I'm currently studying
+                              <strong>"Software Engineering"</strong> at SUST.
+                              Now I'm in my 3rd year, 1st semester. In my
+                              curriculum I'm gathering some knowledge about
+                              software industry. And I feel great to get the
+                              opportunity to be a student at SUST.
+                            </p>
+                          </div>
+                          <!--===== timeline item =====-->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2018 - 2020
+                            </h3>
+                            <h4 class="timeline-title">
+                              Jatir Janak Bangabandhu Sheikh Mujibur Rahman
+                              Government College, Airport, Uttara, Dhaka
+                            </h4>
+                            <p class="timeline-text">
+                              I studied in the <strong>"Science"</strong>
+                              section of my college. I took my HSC exam from the
+                              Dhaka Board. And passed with a GPA of 5. Although
+                              my college life was short, I attended various
+                              olympiads, science fairs, and events with my
+                              friends.
+                            </p>
+                          </div>
+                          <!--===== timeline item =====-->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2016 - 2018
+                            </h3>
+                            <h4 class="timeline-title">
+                              Uttarkhan Govt. Secondary School, Uttarkhan, Dhaka
+                            </h4>
+                            <p class="timeline-text">
+                              I have studied in the
+                              <strong>"Science"</strong> section in my school
+                              life. I took the SSC exam from the Dhaka Board.
+                              And passed with a GPA of 5. During my long school
+                              life, I used to study with my friends, play
+                              sports, and joke a lot.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="experience padd-15">
+                    <h3 class="title">Experience</h3>
+                    <div class="row">
+                      <div class="timeline-box padd-15">
+                        <div class="timeline shadow-dark">
+                          <!--===== timeline item =====-->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2024
+                            </h3>
+                            <h4 class="timeline-title">
+                              Research assistant at "WoNBias"
+                            </h4>
+                            <p class="timeline-text">
+                              WoNBias: A Dataset for Classifying Bias &
+                              Prejudice Against Women in Bengali Text. I helped
+                              my university senior with his thesis work.
+                              Basically, he needed a lot of data for his
+                              research work. I used to collect data from various
+                              sources. And it took a long time to complete the
+                              task. Later, based on my data, he created a data
+                              set for his thesis work.
+                            </p>
+                          </div>
+                          <!--===== timeline item =====-->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2023
+                            </h3>
+                            <h4 class="timeline-title">
+                              Build "Campus Connect" Android App
+                            </h4>
+                            <p class="timeline-text">
+                              I made a chat application when I was in my second
+                              year of university. Where the JAVA language was
+                              used and Firebase Firestore was used as a
+                              database. This is the first Android app I made. It
+                              works like a real chat application.
+                            </p>
+                          </div>
+                          <!--===== timeline item =====-->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2023
+                            </h3>
+                            <h4 class="timeline-title">
+                              Volunteer at "Technovent"
+                            </h4>
+                            <p class="timeline-text">
+                              It was an Inter University Programming Contest
+                              during my first year of university. I worked as a
+                              volunteer. Talented programmers from many
+                              universities participated in the competition here.
+                              We have worked our best to conduct the event
+                              smoothly.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--===== About Section End =====-->
+        <!-- ===== Skills Section Start ===== -->
+        <section class="skills section" id="skills">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2>My Skills</h2>
+              </div>
+            </div>
+            <div class="row">
+              <!-- ===== Skill Category: Languages ===== -->
+              <div class="skill-category padd-15">
+                <div class="skill-category-inner">
+                  <div class="category-header">
+                    <div class="category-icon">
+                      <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Languages</h3>
+                    <p>Programming languages I specialize in</p>
+                  </div>
+                  <div class="skills-list">
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">C++</span>
+                        <span class="skill-percentage">85</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress-bar" data-progress="85"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Java</span>
+                        <span class="skill-percentage">80</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress-bar" data-progress="80"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-percentage">90</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress-bar" data-progress="90"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">TypeScript</span>
+                        <span class="skill-percentage">85</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress-bar" data-progress="85"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Python</span>
+                        <span class="skill-percentage">80</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress-bar" data-progress="80"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ===== Skill Category: Frameworks & Technologies ===== -->
+              <div class="skill-category padd-15">
+                <div class="skill-category-inner">
+                  <div class="category-header">
+                    <div class="category-icon">
+                      <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Frameworks & Technologies</h3>
+                    <p>Modern frameworks and technology stack</p>
+                  </div>
+                  <div class="skills-list">
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">React</span>
+                        <span class="skill-percentage">90</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress-bar" data-progress="90"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Node.js</span>
+                        <span class="skill-percentage">85</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress-bar" data-progress="85"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Next.js</span>
+                        <span class="skill-percentage">88</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress-bar" data-progress="88"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Tailwind CSS</span>
+                        <span class="skill-percentage">85</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress-bar" data-progress="85"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Next.Auth</span>
+                        <span class="skill-percentage">80</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress-bar" data-progress="80"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">LangChain</span>
+                        <span class="skill-percentage">75</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress-bar" data-progress="75"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ===== Skill Category: Databases ===== -->
+              <div class="skill-category padd-15">
+                <div class="skill-category-inner">
+                  <div class="category-header">
+                    <div class="category-icon">
+                      <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Databases</h3>
+                    <p>Database management and data storage solutions</p>
+                  </div>
+                  <div class="skills-list">
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">MongoDB</span>
+                        <span class="skill-percentage">85</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress-bar" data-progress="85"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">MySQL</span>
+                        <span class="skill-percentage">80</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress-bar" data-progress="80"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Convex Vector DB</span>
+                        <span class="skill-percentage">75</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress-bar" data-progress="75"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ===== Skill Category: Tools & Projects ===== -->
+              <div class="skill-category padd-15">
+                <div class="skill-category-inner">
+                  <div class="category-header">
+                    <div class="category-icon">
+                      <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Tools & Projects</h3>
+                    <p>Development tools and project technologies</p>
+                  </div>
+                  <div class="skills-list">
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Git & GitHub</span>
+                        <span class="skill-percentage">90</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress-bar" data-progress="90"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Cloudinary</span>
+                        <span class="skill-percentage">85</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress-bar" data-progress="85"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">Docker</span>
+                        <span class="skill-percentage">75</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress-bar" data-progress="75"></div>
+                      </div>
+                    </div>
+                    <div class="skill-item">
+                      <div class="skill-info">
+                        <span class="skill-name">VS Code</span>
+                        <span class="skill-percentage">95</span>
+                      </div>
+                      <div class="skill-progress">
+                        <div class="progress-bar" data-progress="95"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ===== Skills Section End ===== -->
+        <!-- ===== Projects Section Start ===== -->
+        <section class="portfolio section" id="portfolio">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2>Projects</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="portfolio-heading padd-15">
+                <h2>My Last Projects :</h2>
+              </div>
+            </div>
+            <div class="row">
+              <!-- ===== portfolio item start ===== -->
+              <div class="portfolio-item padd-15">
+                <div
+                  class="portfolio-item-inner shadow-dark"
+                  data-project="campus-connect"
+                >
+                  <div class="portfolio-img">
+                    <a href="https://github.com/fsRakib/Campus_Connect.git">
+                      <img src="images/portfolio/portfolio-1.jpg" alt=""
+                    /></a>
+                  </div>
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-metadata">
+                      <h4 class="metadata-preview-title">Campus Connect</h4>
+                      <p class="metadata-preview-text">
+                        Social platform for students
+                      </p>
+                      <a
+                        href="#"
+                        class="view-details-btn"
+                        onclick="showProjectDetails('campus-connect')"
+                        >View Details</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4 class="portfolio-title">Campus Connect</h4>
+                </div>
+              </div>
+              <!-- ===== portfolio item end ===== -->
+              <!-- ===== portfolio item start ===== -->
+              <div class="portfolio-item padd-15">
+                <div
+                  class="portfolio-item-inner shadow-dark"
+                  data-project="portfolio-website"
+                >
+                  <div class="portfolio-img">
+                    <img src="images/portfolio/portfolio-2.jpg" alt="" />
+                  </div>
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-metadata">
+                      <h4 class="metadata-preview-title">Portfolio Website</h4>
+                      <p class="metadata-preview-text">
+                        Responsive personal portfolio
+                      </p>
+                      <a
+                        href="#"
+                        class="view-details-btn"
+                        onclick="showProjectDetails('portfolio-website')"
+                        >View Details</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4 class="portfolio-title">Portfolio Website</h4>
+                </div>
+              </div>
+              <!-- ===== portfolio item end ===== -->
+              <!-- ===== portfolio item start ===== -->
+              <div class="portfolio-item padd-15">
+                <div
+                  class="portfolio-item-inner shadow-dark"
+                  data-project="visual-chat"
+                >
+                  <div class="portfolio-img">
+                    <a href="https://github.com/fsRakib/Visual_Chat.git">
+                      <img src="images/portfolio/portfolio-3.jpg" alt=""
+                    /></a>
+                  </div>
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-metadata">
+                      <h4 class="metadata-preview-title">Visual Chat</h4>
+                      <p class="metadata-preview-text">
+                        Real-time video chat app
+                      </p>
+                      <a
+                        href="#"
+                        class="view-details-btn"
+                        onclick="showProjectDetails('visual-chat')"
+                        >View Details</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4 class="portfolio-title">Visual Chat</h4>
+                </div>
+              </div>
+              <!-- ===== portfolio item end ===== -->
+              <!-- ===== portfolio item start ===== -->
+              <div class="portfolio-item padd-15">
+                <div
+                  class="portfolio-item-inner shadow-dark"
+                  data-project="ecommerce-platform"
+                >
+                  <div class="portfolio-img">
+                    <a href="https://github.com/fsRakib/Campus_Connect.git">
+                      <img src="images/portfolio/portfolio-1.jpg" alt=""
+                    /></a>
+                  </div>
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-metadata">
+                      <h4 class="metadata-preview-title">
+                        E-Commerce Platform
+                      </h4>
+                      <p class="metadata-preview-text">
+                        Full-stack shopping solution
+                      </p>
+                      <a
+                        href="#"
+                        class="view-details-btn"
+                        onclick="showProjectDetails('ecommerce-platform')"
+                        >View Details</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4 class="portfolio-title">E-Commerce Platform</h4>
+                </div>
+              </div>
+              <!-- ===== portfolio item end ===== -->
+              <!-- ===== portfolio item start ===== -->
+              <div class="portfolio-item padd-15">
+                <div
+                  class="portfolio-item-inner shadow-dark"
+                  data-project="task-management"
+                >
+                  <div class="portfolio-img">
+                    <img src="images/portfolio/portfolio-2.jpg" alt="" />
+                  </div>
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-metadata">
+                      <h4 class="metadata-preview-title">
+                        Task Management App
+                      </h4>
+                      <p class="metadata-preview-text">
+                        Collaborative task manager
+                      </p>
+                      <a
+                        href="#"
+                        class="view-details-btn"
+                        onclick="showProjectDetails('task-management')"
+                        >View Details</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4 class="portfolio-title">Task Management App</h4>
+                </div>
+              </div>
+              <!-- ===== portfolio item end ===== -->
+              <!-- ===== portfolio item start ===== -->
+              <div class="portfolio-item padd-15">
+                <div
+                  class="portfolio-item-inner shadow-dark"
+                  data-project="weather-dashboard"
+                >
+                  <div class="portfolio-img">
+                    <a href="https://github.com/fsRakib/Visual_Chat.git">
+                      <img src="images/portfolio/portfolio-3.jpg" alt=""
+                    /></a>
+                  </div>
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-metadata">
+                      <h4 class="metadata-preview-title">Weather Dashboard</h4>
+                      <p class="metadata-preview-text">
+                        Interactive weather forecasts
+                      </p>
+                      <a
+                        href="#"
+                        class="view-details-btn"
+                        onclick="showProjectDetails('weather-dashboard')"
+                        >View Details</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4 class="portfolio-title">Weather Dashboard</h4>
+                </div>
+              </div>
+              <!-- ===== portfolio item end ===== -->
+              <!-- ===== portfolio item start ===== -->
+              <div class="portfolio-item padd-15">
+                <div
+                  class="portfolio-item-inner shadow-dark"
+                  data-project="ai-learning"
+                >
+                  <div class="portfolio-img">
+                    <a href="https://github.com/fsRakib/Campus_Connect.git">
+                      <img src="images/portfolio/portfolio-1.jpg" alt=""
+                    /></a>
+                  </div>
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-metadata">
+                      <h4 class="metadata-preview-title">
+                        AI Learning Platform
+                      </h4>
+                      <p class="metadata-preview-text">
+                        ML education with tutorials
+                      </p>
+                      <a
+                        href="#"
+                        class="view-details-btn"
+                        onclick="showProjectDetails('ai-learning')"
+                        >View Details</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4 class="portfolio-title">AI Learning Platform</h4>
+                </div>
+              </div>
+              <!-- ===== portfolio item end ===== -->
+              <!-- ===== portfolio item start ===== -->
+              <div class="portfolio-item padd-15">
+                <div
+                  class="portfolio-item-inner shadow-dark"
+                  data-project="blockchain-wallet"
+                >
+                  <div class="portfolio-img">
+                    <img src="images/portfolio/portfolio-2.jpg" alt="" />
+                  </div>
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-metadata">
+                      <h4 class="metadata-preview-title">Blockchain Wallet</h4>
+                      <p class="metadata-preview-text">Secure crypto wallet</p>
+                      <a
+                        href="#"
+                        class="view-details-btn"
+                        onclick="showProjectDetails('blockchain-wallet')"
+                        >View Details</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4 class="portfolio-title">Blockchain Wallet</h4>
+                </div>
+              </div>
+              <!-- ===== portfolio item end ===== -->
+              <!-- ===== portfolio item start ===== -->
+              <div class="portfolio-item padd-15">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <a href="https://github.com/fsRakib/Visual_Chat.git">
+                      <img src="images/portfolio/portfolio-3.jpg" alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4 class="portfolio-title">Visual Chat</h4>
+                </div>
+              </div>
+              <!-- ===== portfolio item end ===== -->
+              <!-- ===== portfolio item start ===== -->
+              <div class="portfolio-item padd-15">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <a href="https://github.com/fsRakib/Campus_Connect.git">
+                      <img src="images/portfolio/portfolio-1.jpg" alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4 class="portfolio-title">Capmus Connect</h4>
+                </div>
+              </div>
+              <!-- ===== portfolio item end ===== -->
+              <!-- ===== portfolio item start ===== -->
+              <div class="portfolio-item padd-15">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <img src="images/portfolio/portfolio-2.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4 class="portfolio-title">Portfolio Website</h4>
+                </div>
+              </div>
+              <!-- ===== portfolio item end ===== -->
+              <!-- ===== portfolio item start ===== -->
+              <div class="portfolio-item padd-15">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <a href="https://github.com/fsRakib/Visual_Chat.git">
+                      <img src="images/portfolio/portfolio-3.jpg" alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4 class="portfolio-title">Visual Chat</h4>
+                </div>
+              </div>
+              <!-- ===== portfolio item end ===== -->
+              <!-- ===== portfolio item start ===== -->
+              <div class="portfolio-item padd-15">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <a href="https://github.com/Saikat-too/Pacman.git">
+                      <img src="images/portfolio/portfolio-4.jpg" alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4 class="portfolio-title">Pacman</h4>
+                </div>
+              </div>
+              <!-- ===== portfolio item end ===== -->
+              <!-- ===== portfolio item start ===== -->
+              <div class="portfolio-item padd-15">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <a
+                      href="https://github.com/Raisul191491/Gender-Bias-Filtering-csebuetnlp-Banglabert.git"
+                    >
+                      <img src="images/portfolio/portfolio-5.jpg" alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4 class="portfolio-title">WoNBias Data collection</h4>
+                </div>
+              </div>
+              <!-- ===== portfolio item end ===== -->
+              <!-- ===== portfolio item start ===== -->
+              <div class="portfolio-item padd-15">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <a href="https://github.com/fsRakib/Game-Project-SWE-.git">
+                      <img src="images/portfolio/portfolio-6.jpg" alt=""
+                    /></a>
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4 class="portfolio-title">Car Racing</h4>
+                </div>
+              </div>
+              <!-- ===== portfolio item end ===== -->
+            </div>
+          </div>
+        </section>
+        <!-- ===== Portfolio Section End ===== -->
+        <!-- ===== Contact Section Start ===== -->
+        <section class="contact section" id="contact">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2>Contact Me</h2>
+              </div>
+            </div>
+            <h3 class="contact-title padd-15">Have You Any Question ?</h3>
+            <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICES</h4>
+            <div class="row">
+              <!-- ===== Contact info item start ===== -->
+              <div class="contact-info-item padd-15">
+                <div class="icon"><i class="fa fa-phone"></i></div>
+                <h4>Call Us On</h4>
+                <p>+880 1888166570</p>
+              </div>
+              <!-- ===== Contact info item end ===== -->
+              <!-- ===== Contact info item start ===== -->
+              <div class="contact-info-item padd-15">
+                <div class="icon">
+                  <a
+                    href="https://www.linkedin.com/in/md-rakibul-kabir-26333428a/"
+                    ><i class="fa fa-brands fa-linkedin"></i
+                  ></a>
+                </div>
+                <h4>LinkedIn</h4>
+                <p>Rakib</p>
+              </div>
+              <!-- ===== Contact info item end ===== -->
+              <!-- ===== Contact info item start ===== -->
+              <div class="contact-info-item padd-15">
+                <div class="icon"><i class="fa fa-envelope"></i></div>
+                <h4>Email</h4>
+                <p>fsrakiba50@gmail.com</p>
+              </div>
+              <!-- ===== Contact info item end ===== -->
+              <!-- ===== Contact info item start ===== -->
+              <div class="contact-info-item padd-15">
+                <div class="icon">
+                  <a href="https://www.facebook.com/fsrakib205"
+                    ><i class="fa fa-brands fa-facebook"></i
+                  ></a>
+                </div>
+                <h4>Facebook</h4>
+                <p>fsRakib</p>
+              </div>
+              <!-- ===== Contact info item end ===== -->
+            </div>
+            <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
+            <h4 class="contact-sub-title padd-15">
+              I'M VERY RESPONSIVE TO MESSAGE
+            </h4>
+            <!-- ===== Contact Form ===== -->
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <div class="row">
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="65f330a7-ac4a-40fd-a5d0-7f1b6bc8bb3e"
+                />
+                <div class="contact-form padd-15">
+                  <div class="row">
+                    <div class="form-item col-6 padd-15">
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="name"
+                          placeholder="Name"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-item col-6 padd-15">
+                      <div class="form-group">
+                        <input
+                          type="email"
+                          class="form-control"
+                          name="email"
+                          placeholder="Email"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-item col-12 padd-15">
+                      <div class="form-group">
+                        <textarea
+                          name="message"
+                          class="form-control"
+                          id=""
+                          placeholder="Message"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-item col-12 padd-15">
+                      <button type="submit" class="btn">Send Message</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+        <!-- ===== Contact Section End ===== -->
+      </div>
+      <!--===== Main Content End =====-->
     </div>
     <!--===== Main Container End =====-->
-    <!--===== Style Switcher End =====-->
+
+    <!--===== Style Switcher Start =====-->
     <div class="style-switcher">
-        <div class="style-switcher-toggler s-icon">
-            <i class="fas fa-cog fa-spin"></i>
-        </div>
-        <div class="day-night s-icon">
-            <i class="fas "></i>
-        </div>
-        <h4>Theme Colors</h4>
-        <div class="colors">
-            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
-        </div>
+      <div class="style-switcher-toggler s-icon">
+        <i class="fas fa-cog fa-spin"></i>
+      </div>
+      <div class="day-night s-icon">
+        <i class="fas"></i>
+      </div>
+      <h4>Theme Colors</h4>
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+      </div>
     </div>
     <!--===== Style Switcher End =====-->
     <!--===== JS Files =====-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
-        integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
+      integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="js/script.js"></script>
     <script src="js/style-switcher.js"></script>
-</body>
-
+  </body>
 </html>
