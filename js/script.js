@@ -1,13 +1,16 @@
 /*========================typing animation =========================*/
-var typed = new Typed(".typing", {
-  strings: ["", "Student", "Android Developer", "Web Developer"],
-  typeSpeed: 100,
-  BackSpeed: 60,
-  loop: true,
-});
+// Note: Typing animation is now handled by component-loader.js
+// var typed = new Typed(".typing", {
+//   strings: ["", "Student", "Android Developer", "Web Developer"],
+//   typeSpeed: 100,
+//   BackSpeed: 60,
+//   loop: true,
+// });
 
 /*======================== Navigation and Section Control =========================*/
-window.addEventListener("DOMContentLoaded", function () {
+// Note: Navigation is now handled by component-loader.js
+// The following code will run after components are loaded
+function initializeMainScriptFeatures() {
   // Navigation functionality
   const navLinks = document.querySelectorAll(".nav a");
   const sections = document.querySelectorAll(".section");
@@ -88,7 +91,10 @@ window.addEventListener("DOMContentLoaded", function () {
       updateActiveNavLink(hash);
     }
   });
-});
+}
+
+// Export function to be called by component loader
+window.initializeMainScriptFeatures = initializeMainScriptFeatures;
 
 /*======================== Enhanced Portfolio Hover Effects =========================*/
 document.addEventListener("DOMContentLoaded", function () {
