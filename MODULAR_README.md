@@ -1,8 +1,8 @@
-# Portfolio Website - Modular Structure
+# AI Notes - Modular Structure
 
 ## Overview
 
-This portfolio website has been modularized to improve maintainability, readability, and organization. The large index.html file (1266+ lines) has been broken down into smaller, manageable components.
+This AI Notes has been modularized to improve maintainability, readability, and organization. The large index.html file (1266+ lines) has been broken down into smaller, manageable components.
 
 ## Project Structure
 
@@ -37,7 +37,7 @@ Portfolio/
 
 ### 2. **Project Modals Component** (`components/project-modals.html`)
 
-- All project detail modals (Campus Connect, Visual Chat, etc.)
+- All project detail modals (Effective Learning, Appointment System, etc.)
 - Backdrop and modal functionality
 - Easy to add new project modals
 
@@ -186,4 +186,4 @@ Potential improvements for the modular system:
 
 ---
 
-This modular structure makes your portfolio website much more maintainable and professional while preserving all existing functionality!
+This modular structure makes your AI Notes much more maintainable and professional while preserving all existing functionality!

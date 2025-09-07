@@ -1,0 +1,57 @@
+/* Portfolio Image Fix CSS */
+.portfolio .portfolio-item-inner .portfolio-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 9px;
+  height: 200px; /* Fixed height to maintain consistent size */
+  background: #f0f0f0; /* fallback background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio .portfolio-item-inner .portfolio-img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important; /* This ensures the whole image is visible while maintaining aspect ratio */
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  filter: brightness(0.9) contrast(1.1);
+  z-index: 1;
+  position: relative;
+}
+
+.portfolio .portfolio-item-inner:hover .portfolio-img img {
+  transform: scale(1.05); /* Reduced scale to prevent overflow with contain */
+  filter: brightness(1.1) contrast(1.2);
+}
+
+/* Ensure overlay doesn't cover image when not hovered */
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    var(--skin-color) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(15px) saturate(1.5);
+  border-radius: 9px;
+  z-index: 2;
+}
+
+.portfolio .portfolio-item-inner:hover .portfolio-overlay {
+  opacity: 1 !important;
+  visibility: visible !important;
+}

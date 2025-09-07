@@ -1,5 +1,5 @@
 /**
- * Component Loader for Portfolio Website
+ * Component Loader for AI Notes
  * Dynamically loads HTML components to maintain modularity
  */
 

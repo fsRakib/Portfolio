@@ -154,8 +154,9 @@ ul {
   position: relative;
 }
 .aside .logo a span {
-  font-family: "Clicker Script", cursive;
+  font-family: inherit;
   font-size: 40px;
+  font-weight: 700;
 }
 .aside .logo a::before {
   content: "";
@@ -270,9 +271,9 @@ h3.hello {
   margin: 15px 0;
 }
 h3.hello span {
-  font-family: "Clicker Script", cursive;
+  font-family: inherit;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--skin-color);
 }
 h3.my-profession {
