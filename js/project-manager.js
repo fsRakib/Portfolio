@@ -105,10 +105,10 @@ class ProjectManager {
     }
   }
 
-  // Load projects from localStorage
+  // Load projects from sessionStorage
   loadProjects() {
     try {
-      const stored = localStorage.getItem(this.storageKey);
+      const stored = sessionStorage.getItem(this.storageKey);
       return stored ? JSON.parse(stored) : [];
     } catch (error) {
       console.error("Error loading projects:", error);
@@ -116,10 +116,10 @@ class ProjectManager {
     }
   }
 
-  // Save projects to localStorage
+  // Save projects to sessionStorage
   saveProjects() {
     try {
-      localStorage.setItem(this.storageKey, JSON.stringify(this.projects));
+      sessionStorage.setItem(this.storageKey, JSON.stringify(this.projects));
       return true;
     } catch (error) {
       console.error("Error saving projects:", error);
