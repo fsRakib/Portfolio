@@ -31,8 +31,8 @@ function initializeMainScriptFeatures() {
     if (target) {
       target.classList.add("active");
       currentSection = targetSection;
-      // Save current section to localStorage for persistence
-      localStorage.setItem("currentSection", targetSection);
+      // Save current section to sessionStorage (cleared when tab closes)
+      sessionStorage.setItem("currentSection", targetSection);
     }
   }
 
@@ -81,9 +81,9 @@ function initializeMainScriptFeatures() {
     });
   }
 
-  // Initialize - restore last active section or show home
+  // Initialize - restore last active section in current session or show home
   const lastSection =
-    localStorage.getItem("currentSection") ||
+    sessionStorage.getItem("currentSection") ||
     window.location.hash.substring(1) ||
     "home";
   const sectionToShow = document.getElementById(lastSection)
@@ -104,8 +104,8 @@ function initializeMainScriptFeatures() {
       showSection(hash);
       updateActiveNavLink(hash);
     } else if (!hash) {
-      // If hash is removed, go to last saved section or home
-      const savedSection = localStorage.getItem("currentSection") || "home";
+      // If hash is removed, go to last saved section in session or home
+      const savedSection = sessionStorage.getItem("currentSection") || "home";
       showSection(savedSection);
       updateActiveNavLink(savedSection);
     }
