@@ -32,9 +32,18 @@
 
     <!-- Manager Content (Hidden until authenticated) -->
     <div id="manager-content" style="display: none">
-      <!-- Logout Button -->
+      <!-- Logout and Data Management Buttons -->
       <div class="row">
-        <div class="padd-15" style="text-align: right; margin-bottom: 20px">
+        <div class="padd-15" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button onclick="projectManager.exportProjects()" class="btn btn-outline" title="Export all projects to JSON file">
+              <i class="fas fa-download"></i> Export Projects
+            </button>
+            <label class="btn btn-outline" style="margin: 0; cursor: pointer;" title="Import projects from JSON file">
+              <i class="fas fa-upload"></i> Import Projects
+              <input type="file" id="import-projects-input" accept=".json" style="display: none;" onchange="projectManager.importProjects(this)" />
+            </label>
+          </div>
           <button id="logout-btn" class="btn btn-secondary">
             <i class="fas fa-sign-out-alt"></i> Logout
           </button>
@@ -47,6 +56,19 @@
         class="project-message"
         style="display: none"
       ></div>
+
+      <!-- Info Box for Data Management -->
+      <div class="row">
+        <div class="padd-15">
+          <div class="info-box" style="background: var(--bg-black-100); padding: 15px; border-radius: 10px; margin-bottom: 20px; border-left: 3px solid var(--skin-color);">
+            <p style="margin: 0; color: var(--text-black-700); line-height: 1.6;">
+              <i class="fas fa-info-circle" style="color: var(--skin-color);"></i>
+              <strong>Note:</strong> Projects are stored in your browser's localStorage. 
+              Use <strong>Export</strong> to save your projects to a file, and <strong>Import</strong> to load them on different devices or after deployment.
+            </p>
+          </div>
+        </div>
+      </div>
 
       <!-- Add Project Form -->
       <div class="row">
