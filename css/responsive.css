@@ -403,14 +403,27 @@
    MOBILE (320px - 575px)
    ======================================== */
 @media (max-width: 575px) {
+  /* Base styles for better touch interaction */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Ensure proper viewport on mobile */
+  body {
+    overflow-x: hidden;
+    position: relative;
+  }
+
   /* Section padding */
   .section {
     padding: 0 8px;
+    min-height: auto;
   }
 
   .section .container {
     padding-top: 30px;
     padding-bottom: 30px;
+    max-width: 100%;
   }
 
   .padd-15 {
@@ -418,13 +431,24 @@
     padding-right: 10px;
   }
 
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
   /* Section titles */
   .section-title h2 {
     font-size: 24px;
+    line-height: 1.3;
   }
 
   .section-title {
     margin-bottom: 25px;
+  }
+
+  .skills-subtitle {
+    font-size: 14px;
+    margin-top: 8px;
   }
 
   /* Home Section */
@@ -616,89 +640,314 @@
   /* Project Manager */
   .auth-box {
     max-width: 100%;
-    padding: 25px;
+    padding: 20px 15px;
+    margin: 0 10px;
   }
 
-  .project-manager .add-project-form {
-    padding: 20px;
+  .auth-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    margin-bottom: 15px;
   }
 
-  .project-manager .form-control {
+  .auth-form input {
     font-size: 14px;
-    padding: 8px 15px;
+    padding: 10px 15px;
+  }
+
+  .project-manager .project-form-container {
+    padding: 0;
+  }
+
+  .project-manager .project-form {
+    padding: 20px 15px;
+    border-radius: 8px;
+  }
+
+  .project-manager .project-form h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .project-manager .form-row {
+    flex-direction: column;
+  }
+
+  .project-manager .form-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .project-manager .form-control,
+  .project-manager input,
+  .project-manager select,
+  .project-manager textarea {
+    font-size: 14px;
+    padding: 10px 15px;
+    width: 100%;
+  }
+
+  .project-manager textarea {
+    min-height: 100px;
+  }
+
+  .project-manager .form-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .project-manager .form-actions .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
   }
 
   .project-list-item {
     padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-list-item h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .project-list-item .project-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
   }
 
   .btn-icon {
-    width: 35px;
-    height: 35px;
-    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    min-width: 40px;
+  }
+
+  /* Info box for mobile */
+  .info-box {
+    padding: 12px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .info-box p {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
   }
 
   /* CV Manager */
+  .cv-manager-section .section-title h2 {
+    font-size: 22px;
+  }
+
   .cv-upload-box {
-    padding: 20px;
+    padding: 20px 15px;
+  }
+
+  .file-upload-area {
+    padding: 30px 15px;
+    min-height: 200px;
+  }
+
+  .file-upload-area i {
+    font-size: 40px;
+  }
+
+  .file-upload-area p {
+    font-size: 13px;
+    margin: 10px 0;
   }
 
   .cv-card {
     flex-direction: column;
     text-align: center;
+    padding: 20px 15px;
   }
 
   .cv-icon-large {
     margin-bottom: 15px;
+    font-size: 50px;
+  }
+
+  .cv-info h3 {
+    font-size: 18px;
+  }
+
+  .cv-info p {
+    font-size: 13px;
   }
 
   .cv-actions {
     width: 100%;
     justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cv-actions .btn {
+    width: 100%;
   }
 
   /* Floating Action Buttons */
   .floating-action-btn {
-    width: 48px;
-    height: 48px;
-    font-size: 18px;
-    bottom: 70px;
-    right: 15px;
+    width: 56px;
+    height: 56px;
+    font-size: 22px;
+    bottom: 80px;
+    right: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .floating-action-btn i {
+    line-height: 56px;
+  }
+
+  /* Better touch target for FABs */
+  .floating-action-btn::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
   }
 
   /* Sidebar */
   .aside {
-    width: 220px;
-    left: -220px;
+    width: 260px;
+    left: -260px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
   }
 
   .aside.open {
     left: 0;
   }
 
+  .aside .nav-toggler {
+    left: 20px;
+    top: 20px;
+    width: 45px;
+    height: 45px;
+    z-index: 1001;
+  }
+
   .aside .nav-toggler.open {
-    left: 240px;
+    left: 280px;
+  }
+
+  .aside .nav-toggler span {
+    height: 3px;
   }
 
   .aside .logo {
-    padding: 20px 15px;
+    padding: 25px 20px;
+    border-bottom: 1px solid var(--bg-black-50);
   }
 
   .aside .logo a {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .aside .nav {
-    margin-top: 30px;
+    margin-top: 35px;
+    padding: 0 10px;
   }
 
   .aside .nav li {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
 
   .aside .nav li a {
+    font-size: 15px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  .aside .nav li a i {
+    margin-right: 12px;
+    font-size: 18px;
+  }
+
+  /* Buttons - Better touch targets */
+  .btn {
+    min-height: 44px;
+    padding: 10px 20px;
     font-size: 14px;
-    padding: 8px 30px;
+  }
+
+  .btn-outline {
+    border-width: 2px;
+  }
+
+  /* Style Switcher for Mobile */
+  .style-switcher {
+    width: 100%;
+    left: 0;
+    right: auto;
+    padding: 15px;
+    border-radius: 0;
+  }
+
+  .style-switcher .s-icon {
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .style-switcher .day-night {
+    width: 45px;
+    height: 45px;
+    right: 75px;
+  }
+
+  .style-switcher h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .style-switcher .colors span {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Improve form inputs for mobile */
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="date"],
+  input[type="password"],
+  select,
+  textarea {
+    font-size: 16px !important; /* Prevent zoom on iOS */
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  /* Message styling */
+  .project-message {
+    font-size: 14px;
+    padding: 12px 15px;
+    margin: 0 10px 20px;
+  }
+
+  /* Portfolio grid - single column on mobile */
+  .portfolio .portfolio-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Skills grid - better spacing */
+  .skill-tag {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -706,6 +955,15 @@
    EXTRA SMALL MOBILE (max-width: 375px)
    ======================================== */
 @media (max-width: 375px) {
+  .section {
+    padding: 0 5px;
+  }
+
+  .padd-15 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
   .section-title h2 {
     font-size: 20px;
   }
@@ -718,9 +976,21 @@
     font-size: 18px;
   }
 
+  .home .home-info p {
+    font-size: 13px;
+  }
+
   .home .btn {
-    font-size: 12px;
-    padding: 7px 18px;
+    font-size: 13px;
+    padding: 10px 18px;
+    max-width: 180px;
+  }
+
+  .home .social-links a {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    margin: 0 3px;
   }
 
   .skill-tag {
@@ -728,13 +998,56 @@
     font-size: 11px;
   }
 
+  .achievement-card {
+    padding: 15px;
+  }
+
   .achievement-card h4 {
     font-size: 24px;
   }
 
+  .achievement-card p {
+    font-size: 13px;
+  }
+
   .external-metadata {
-    min-width: 240px;
-    max-width: 280px;
+    min-width: 95%;
+    max-width: 95%;
+    margin: 0 10px;
+  }
+
+  .portfolio-item {
+    margin-bottom: 15px;
+  }
+
+  .floating-action-btn {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+    bottom: 70px;
+    right: 15px;
+  }
+
+  .aside {
+    width: 240px;
+    left: -240px;
+  }
+
+  .aside .nav-toggler.open {
+    left: 260px;
+  }
+
+  .project-manager .project-form {
+    padding: 15px 10px;
+  }
+
+  .auth-box {
+    padding: 20px 12px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 10px 16px;
   }
 }
 
