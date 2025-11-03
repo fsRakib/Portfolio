@@ -1,0 +1,250 @@
+<!-- ===== Project Manager Section Start ===== -->
+<section class="project-manager section" id="project-manager">
+  <div class="container">
+    <div class="row">
+      <div class="section-title padd-15">
+        <h2>Project Manager</h2>
+        <p class="skills-subtitle">Add and manage your projects</p>
+      </div>
+    </div>
+
+    <!-- Authentication Screen -->
+    <div id="auth-screen" class="auth-screen">
+      <div class="auth-box">
+        <div class="auth-icon">
+          <i class="fas fa-lock"></i>
+        </div>
+        <h3>Admin Access Required</h3>
+        <p>Please enter your password to manage projects</p>
+        <form id="auth-form" class="auth-form">
+          <input
+            type="password"
+            id="admin-password"
+            placeholder="Enter password"
+            required
+            autocomplete="off"
+          />
+          <button type="submit" class="btn">Login</button>
+        </form>
+        <div id="auth-error" class="auth-error" style="display: none"></div>
+      </div>
+    </div>
+
+    <!-- Manager Content (Hidden until authenticated) -->
+    <div id="manager-content" style="display: none">
+      <!-- Logout Button -->
+      <div class="row">
+        <div class="padd-15" style="text-align: right; margin-bottom: 20px">
+          <button id="logout-btn" class="btn btn-secondary">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </button>
+        </div>
+      </div>
+
+      <!-- Success/Error Messages -->
+      <div
+        id="project-message"
+        class="project-message"
+        style="display: none"
+      ></div>
+
+      <!-- Add Project Form -->
+      <div class="row">
+        <div class="project-form-container padd-15">
+          <form id="add-project-form" class="project-form">
+            <h3>Add New Project</h3>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="project-title">Project Title *</label>
+                <input
+                  type="text"
+                  id="project-title"
+                  name="title"
+                  class="form-control"
+                  required
+                  placeholder="e.g., AI Notes"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="project-id">Project ID *</label>
+                <input
+                  type="text"
+                  id="project-id"
+                  name="id"
+                  class="form-control"
+                  required
+                  placeholder="e.g., ai-notes (lowercase, no spaces)"
+                />
+                <small>Use lowercase letters, numbers, and hyphens only</small>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="project-preview-title">Preview Title *</label>
+                <input
+                  type="text"
+                  id="project-preview-title"
+                  name="previewTitle"
+                  class="form-control"
+                  required
+                  placeholder="Short title for card"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="project-preview-text">Preview Description *</label>
+                <input
+                  type="text"
+                  id="project-preview-text"
+                  name="previewText"
+                  class="form-control"
+                  required
+                  placeholder="Brief description (1 line)"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="project-image">Image URL *</label>
+                <input
+                  type="url"
+                  id="project-image"
+                  name="image"
+                  class="form-control"
+                  required
+                  placeholder="https://example.com/image.jpg"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="project-github">GitHub URL</label>
+                <input
+                  type="url"
+                  id="project-github"
+                  name="github"
+                  class="form-control"
+                  placeholder="https://github.com/username/repo"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="project-demo">Live Demo URL</label>
+                <input
+                  type="url"
+                  id="project-demo"
+                  name="demo"
+                  class="form-control"
+                  placeholder="https://demo-url.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="project-category">Category</label>
+                <select
+                  id="project-category"
+                  name="category"
+                  class="form-control"
+                >
+                  <option value="web">Web Development</option>
+                  <option value="ai">AI/ML</option>
+                  <option value="mobile">Mobile App</option>
+                  <option value="game">Game</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="project-description">Full Description *</label>
+              <textarea
+                id="project-description"
+                name="description"
+                class="form-control"
+                rows="4"
+                required
+                placeholder="Detailed project description..."
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="project-technologies"
+                >Technologies Used (comma-separated) *</label
+              >
+              <input
+                type="text"
+                id="project-technologies"
+                name="technologies"
+                class="form-control"
+                required
+                placeholder="React, Node.js, MongoDB, Tailwind CSS"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="project-features"
+                >Key Features (one per line) *</label
+              >
+              <textarea
+                id="project-features"
+                name="features"
+                class="form-control"
+                rows="4"
+                required
+                placeholder="Feature 1&#10;Feature 2&#10;Feature 3"
+              ></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="project-date">Completion Date</label>
+                <input
+                  type="date"
+                  id="project-date"
+                  name="date"
+                  class="form-control"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="project-status">Status</label>
+                <select id="project-status" name="status" class="form-control">
+                  <option value="completed">Completed</option>
+                  <option value="in-progress">In Progress</option>
+                  <option value="planned">Planned</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn">
+                <i class="fas fa-plus"></i> Add Project
+              </button>
+              <button type="reset" class="btn btn-outline">
+                <i class="fas fa-redo"></i> Reset Form
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Project List -->
+      <div class="row">
+        <div class="section-title padd-15" style="margin-top: 40px">
+          <h3>Your Projects</h3>
+        </div>
+      </div>
+
+      <div class="row" id="project-list">
+        <!-- Projects will be loaded here -->
+      </div>
+    </div>
+    <!-- End Manager Content -->
+  </div>
+</section>
+<!-- ===== Project Manager Section End ===== -->

@@ -1,0 +1,90 @@
+/* ===== Minimal Home Page Styles ===== */
+
+/* Clean spacing for home section */
+.home-modern .home-info {
+  padding-top: 40px;
+}
+
+/* Simple greeting */
+.home .hello {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: var(--text-black-700);
+  animation: fadeIn 0.8s ease;
+}
+
+.home .hello .name {
+  font-weight: 700;
+  color: var(--text-black-900);
+}
+
+/* Simple profession */
+.home .my-profession {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  animation: fadeIn 1s ease;
+}
+
+/* Clean bio */
+.hero-bio {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--text-black-700);
+  margin-bottom: 30px;
+  max-width: 600px;
+  animation: fadeIn 1.2s ease;
+}
+
+/* Simple buttons */
+.home-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+  animation: fadeIn 1.4s ease;
+}
+
+.home-buttons .btn {
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Simple social links - keeping original style */
+.home .social-links {
+  animation: fadeIn 1.6s ease;
+}
+
+/* Simple fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .home .hello {
+    font-size: 24px;
+  }
+
+  .home .my-profession {
+    font-size: 28px;
+  }
+
+  .hero-bio {
+    font-size: 16px;
+  }
+
+  .home-buttons .btn {
+    padding: 12px 24px;
+  }
+}

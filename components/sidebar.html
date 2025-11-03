@@ -1,27 +1,43 @@
 <!--===== Aside Start =====-->
-<div class="aside">
+<aside class="aside" role="navigation" aria-label="Main Navigation">
   <div class="logo">
-    <a href="#"><span>R</span>akib</a>
+    <a href="#home" aria-label="Go to Home"><span>R</span>akib</a>
   </div>
-  <div class="nav-toggler">
-    <span> </span>
-  </div>
-  <ul class="nav">
-    <li>
-      <a href="#home" class="active"><i class="fa fa-home"></i> Home</a>
-    </li>
-    <li>
-      <a href="#about"><i class="fa fa-user"></i> About</a>
-    </li>
-    <li>
-      <a href="#skills"><i class="fa fa-cogs"></i> Skills</a>
-    </li>
-    <li>
-      <a href="#portfolio"><i class="fa fa-briefcase"></i> Projects</a>
-    </li>
-    <li>
-      <a href="#contact"><i class="fa fa-home"></i> Contact</a>
-    </li>
-  </ul>
-</div>
+  <button
+    class="nav-toggler"
+    aria-label="Toggle Navigation Menu"
+    aria-expanded="false"
+  >
+    <span></span>
+  </button>
+  <nav>
+    <ul class="nav">
+      <li>
+        <a href="#home" class="active" aria-label="Home Section">
+          <i class="fa fa-home" aria-hidden="true"></i> Home
+        </a>
+      </li>
+      <li>
+        <a href="#about" aria-label="About Section">
+          <i class="fa fa-user" aria-hidden="true"></i> About
+        </a>
+      </li>
+      <li>
+        <a href="#skills" aria-label="Skills Section">
+          <i class="fa fa-cogs" aria-hidden="true"></i> Skills
+        </a>
+      </li>
+      <li>
+        <a href="#portfolio" aria-label="Projects Section">
+          <i class="fa fa-briefcase" aria-hidden="true"></i> Projects
+        </a>
+      </li>
+      <li>
+        <a href="#contact" aria-label="Contact Section">
+          <i class="fa fa-envelope" aria-hidden="true"></i> Contact
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>
 <!--===== Aside End =====-->

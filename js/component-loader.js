@@ -12,6 +12,14 @@ class ComponentLoader {
       { id: "about-section", file: "components/about.html" },
       { id: "skills-section", file: "components/skills.html" },
       { id: "portfolio-section", file: "components/portfolio.html" },
+      {
+        id: "project-manager-section",
+        file: "components/project-manager.html",
+      },
+      {
+        id: "cv-manager-section",
+        file: "components/cv-manager.html",
+      },
       { id: "contact-section", file: "components/contact.html" },
       { id: "style-switcher", file: "components/style-switcher.html" },
     ];
@@ -82,6 +90,21 @@ class ComponentLoader {
     // Initialize any other component-specific features
     this.initializeScrollEffects();
 
+    // Initialize Project Manager if available
+    if (typeof window.initProjectManager === "function") {
+      window.initProjectManager();
+    }
+
+    // Initialize CV Manager if available
+    if (typeof window.initCVManager === "function") {
+      window.initCVManager();
+    }
+
+    // Initialize FAB Manager if available
+    if (typeof window.initFABManager === "function") {
+      window.initFABManager();
+    }
+
     // Initialize main script features if available
     if (typeof window.initializeMainScriptFeatures === "function") {
       window.initializeMainScriptFeatures();
@@ -94,12 +117,29 @@ class ComponentLoader {
   initializeTypingAnimation() {
     const typingElement = document.querySelector(".typing");
     if (typingElement) {
-      new Typed(".typing", {
-        strings: ["Student", "Developer", "Software Engineer", "Programmer"],
-        typeSpeed: 100,
-        backSpeed: 60,
+      // Destroy any existing instance first to prevent duplicates
+      if (typingElement.typed) {
+        typingElement.typed.destroy();
+      }
+
+      const typed = new Typed(".typing", {
+        strings: [
+          "Software Engineering student",
+          "Full-Stack Developer",
+          "AI Enthusiast",
+          "Problem Solver",
+        ],
+        typeSpeed: 80,
+        backSpeed: 50,
+        backDelay: 1500,
+        startDelay: 500,
         loop: true,
+        showCursor: true,
+        cursorChar: "|",
       });
+
+      // Store the instance for potential cleanup
+      typingElement.typed = typed;
     }
   }
 

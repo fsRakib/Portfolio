@@ -1,0 +1,287 @@
+/* ======================================
+   Floating Action Buttons (FAB)
+   Modern, minimal design for admin actions
+   ====================================== */
+
+.floating-action-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--skin-color) 0%, #ff6b6b 100%);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 9999;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  text-decoration: none;
+  overflow: visible;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Label */
+.fab-label {
+  position: absolute;
+  right: 70px;
+  background: var(--bg-black-100);
+  color: var(--text-black-900);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  border: 1px solid var(--bg-black-50);
+}
+
+/* Show label on hover */
+.floating-action-btn:hover .fab-label {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Hover effect */
+.floating-action-btn:hover {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Active state */
+.floating-action-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon styling */
+.floating-action-btn i {
+  transition: transform 0.3s ease;
+}
+
+.floating-action-btn:hover i {
+  transform: scale(1.1);
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(255, 107, 107, 0.7);
+  }
+  70% {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 0 15px rgba(255, 107, 107, 0);
+  }
+  100% {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(255, 107, 107, 0);
+  }
+}
+
+/* Add pulse animation on page load */
+.floating-action-btn.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Show FABs when their parent section is visible */
+#portfolio .floating-action-btn.visible,
+#about .floating-action-btn.visible,
+#portfolio .floating-action-btn,
+#about .floating-action-btn {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Slightly fade while scrolling */
+.floating-action-btn.scrolling {
+  opacity: 0.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .floating-action-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+    bottom: 25px;
+    right: 25px;
+  }
+
+  .fab-label {
+    font-size: 13px;
+    padding: 8px 16px;
+    right: 65px;
+  }
+}
+
+@media (max-width: 767px) {
+  .floating-action-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    bottom: 80px; /* Above the mobile nav if any */
+    right: 20px;
+  }
+
+  .fab-label {
+    display: none; /* Hide label on mobile to save space */
+  }
+}
+
+@media (max-width: 575px) {
+  .floating-action-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+    bottom: 70px;
+    right: 15px;
+  }
+}
+
+/* Alternative style - Square FAB with rounded corners */
+.floating-action-btn.square {
+  border-radius: 16px;
+  width: 56px;
+  height: 56px;
+}
+
+/* Alternative style - Extended FAB (with visible label) */
+.floating-action-btn.extended {
+  width: auto;
+  padding: 0 24px;
+  border-radius: 30px;
+  gap: 12px;
+}
+
+.floating-action-btn.extended .fab-label {
+  position: static;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  border: none;
+  color: inherit;
+  pointer-events: auto;
+}
+
+/* Tooltip style for better accessibility */
+.floating-action-btn::before {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  margin-bottom: 10px;
+}
+
+.floating-action-btn::after {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 2px);
+  right: 24px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Show tooltip on mobile (since label is hidden) */
+@media (max-width: 767px) {
+  .floating-action-btn:hover::before,
+  .floating-action-btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .fab-label {
+    background: var(--bg-black-50);
+    color: var(--text-black-700);
+    border-color: var(--bg-black-100);
+  }
+}
+
+/* Smooth scroll behavior when clicking FAB */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide FAB when scrolled to top (optional) */
+.floating-action-btn.hide-on-top {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Notification badge (for future use) */
+.floating-action-btn .badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #ff3b30;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--bg-black-900);
+}
+
+/* Multiple FABs support (if needed) */
+.fab-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 998;
+}
+
+.fab-container .floating-action-btn {
+  position: static;
+}
+
+/* Accessibility - Focus state */
+.floating-action-btn:focus {
+  outline: 3px solid var(--skin-color);
+  outline-offset: 4px;
+}
+
+.floating-action-btn:focus:not(:focus-visible) {
+  outline: none;
+}

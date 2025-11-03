@@ -3,12 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio(Rakib)</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Primary Meta Tags -->
+    <title>Md. Rakibul Kabir - Full-Stack Developer & Software Engineer</title>
+    <meta
+      name="title"
+      content="Md. Rakibul Kabir - Full-Stack Developer & Software Engineer"
+    />
+    <meta
+      name="description"
+      content="Final-year Software Engineering student at SUST with expertise in full-stack development, AI integration, and modern web technologies. Explore my portfolio showcasing React, Next.js, Node.js projects."
+    />
+    <meta
+      name="keywords"
+      content="Rakib, Md. Rakibul Kabir, Full-Stack Developer, Software Engineer, SUST, React Developer, Next.js, Node.js, AI Integration, Web Development Portfolio"
+    />
+    <meta name="author" content="Md. Rakibul Kabir" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fsrakib.github.io/Portfolio/" />
+    <meta
+      property="og:title"
+      content="Md. Rakibul Kabir - Full-Stack Developer & Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Final-year Software Engineering student at SUST with expertise in full-stack development, AI integration, and modern web technologies."
+    />
+    <meta
+      property="og:image"
+      content="https://fsrakib.github.io/Portfolio/images/hero.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://fsrakib.github.io/Portfolio/"
+    />
+    <meta
+      property="twitter:title"
+      content="Md. Rakibul Kabir - Full-Stack Developer & Software Engineer"
+    />
+    <meta
+      property="twitter:description"
+      content="Final-year Software Engineering student at SUST with expertise in full-stack development, AI integration, and modern web technologies."
+    />
+    <meta
+      property="twitter:image"
+      content="https://fsrakib.github.io/Portfolio/images/hero.jpg"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
     <!--===== CSS Files ======-->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/skins/color-1.css" />
     <link rel="stylesheet" href="css/style-switcher.css" />
     <link rel="stylesheet" href="css/portfolio-image-fix.css" />
+    <link rel="stylesheet" href="css/improvements.css" />
+    <link rel="stylesheet" href="css/project-manager.css" />
+    <link rel="stylesheet" href="css/cv-manager.css" />
+    <link rel="stylesheet" href="css/home-modern.css" />
+    <link rel="stylesheet" href="css/skills-minimal.css" />
+    <link rel="stylesheet" href="css/floating-action-buttons.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -51,6 +114,17 @@
   </head>
 
   <body class="dark">
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="loader">
+        <div class="loader-inner">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- Project Modals Component -->
     <div id="project-modals">
       <!-- Project modals will be loaded here -->
@@ -85,6 +159,16 @@
           <!-- Portfolio section will be loaded here -->
         </div>
 
+        <!-- Project Manager Section Component -->
+        <div id="project-manager-section">
+          <!-- Project manager will be loaded here -->
+        </div>
+
+        <!-- CV Manager Section Component -->
+        <div id="cv-manager-section">
+          <!-- CV manager will be loaded here -->
+        </div>
+
         <!-- Contact Section Component -->
         <div id="contact-section">
           <!-- Contact section will be loaded here -->
@@ -99,6 +183,11 @@
       <!-- Style switcher will be loaded here -->
     </div>
 
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!--===== JS Files =====-->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
@@ -111,5 +200,49 @@
     <!-- Main Scripts -->
     <script src="js/script.js"></script>
     <script src="js/style-switcher.js"></script>
+    <!-- Enhancements Script -->
+    <script src="js/enhancements.js"></script>
+    <!-- Project Manager Script -->
+    <script src="js/project-manager.js"></script>
+    <!-- CV Manager Script -->
+    <script src="js/cv-manager.js"></script>
+    <!-- FAB Manager Script -->
+    <script src="js/fab-manager.js"></script>
+
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Md. Rakibul Kabir",
+        "jobTitle": "Software Engineer",
+        "url": "https://fsrakib.github.io/Portfolio/",
+        "sameAs": [
+          "https://www.linkedin.com/in/md-rakibul-kabir-26333428a/",
+          "https://www.facebook.com/fsrakib205",
+          "https://github.com/fsRakib"
+        ],
+        "email": "fsrakiba50@gmail.com",
+        "telephone": "+8801888166570",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dhaka",
+          "addressCountry": "Bangladesh"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Shahjalal University of Science and Technology"
+        },
+        "knowsAbout": [
+          "Software Engineering",
+          "Full-Stack Development",
+          "Web Development",
+          "AI Integration",
+          "React",
+          "Next.js",
+          "Node.js"
+        ]
+      }
+    </script>
   </body>
 </html>

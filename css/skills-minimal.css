@@ -1,0 +1,246 @@
+/* ===== Modern Minimal Skills Section ===== */
+
+/* Skills Modern Grid */
+.skills-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+/* Skill Group */
+.skill-group {
+  animation: fadeInUp 0.6s ease;
+}
+
+/* Skill Group Header */
+.skill-group-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--bg-black-50);
+}
+
+.skill-group-header i {
+  font-size: 24px;
+  color: var(--skin-color);
+}
+
+.skill-group-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-black-900);
+  margin: 0;
+}
+
+/* Skill Tags */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  padding: 10px 18px;
+  background: var(--bg-black-100);
+  border: 1px solid var(--bg-black-50);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-black-900);
+  transition: all 0.3s ease;
+  cursor: default;
+  position: relative;
+}
+
+.skill-tag::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--skin-color);
+  opacity: 0;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.skill-tag:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  border-color: var(--skin-color);
+}
+
+.skill-tag:hover::before {
+  opacity: 1;
+}
+
+/* Skill Levels - Subtle indicators */
+.skill-expert {
+  border-left: 3px solid var(--skin-color);
+}
+
+.skill-advanced {
+  border-left: 3px solid rgba(236, 24, 57, 0.5);
+}
+
+/* Achievements Section */
+.skills-achievements {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.achievement-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--bg-black-100);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid var(--bg-black-50);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--skin-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.achievement-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    var(--skin-color),
+    var(--skin-color-hover)
+  );
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.achievement-icon i {
+  font-size: 28px;
+  color: #fff;
+}
+
+.achievement-content {
+  flex: 1;
+}
+
+.achievement-content h4 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--skin-color);
+  margin: 0 0 5px 0;
+  line-height: 1;
+}
+
+.achievement-content p {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-black-900);
+  margin: 0 0 5px 0;
+}
+
+.achievement-content span {
+  font-size: 13px;
+  color: var(--text-black-700);
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .skills-modern {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+  }
+
+  .skill-group-header h3 {
+    font-size: 18px;
+  }
+
+  .skill-tag {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .skills-modern {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .skills-achievements {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .achievement-card {
+    padding: 20px;
+  }
+
+  .achievement-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .achievement-icon i {
+    font-size: 24px;
+  }
+
+  .achievement-content h4 {
+    font-size: 28px;
+  }
+
+  .achievement-content p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .skill-group-header {
+    gap: 10px;
+  }
+
+  .skill-group-header i {
+    font-size: 20px;
+  }
+
+  .skill-group-header h3 {
+    font-size: 16px;
+  }
+
+  .skill-tags {
+    gap: 8px;
+  }
+
+  .skill-tag {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+}

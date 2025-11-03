@@ -1,0 +1,797 @@
+/* ============================================
+   RESPONSIVE STYLES FOR ALL DEVICES
+   Mobile First Approach
+   ============================================ */
+
+/* ========================================
+   LARGE DESKTOP (1400px and above)
+   ======================================== */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  .section-title h2 {
+    font-size: 45px;
+  }
+
+  .home .home-info h3.hello {
+    font-size: 32px;
+  }
+
+  .home .home-info h3.my-profession {
+    font-size: 38px;
+  }
+
+  .home .home-info p {
+    font-size: 18px;
+  }
+}
+
+/* ========================================
+   DESKTOP (1200px - 1399px)
+   ======================================== */
+@media (max-width: 1399px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* ========================================
+   LAPTOP & SMALL DESKTOP (992px - 1199px)
+   ======================================== */
+@media (max-width: 1199px) {
+  /* Sidebar - Hide by default */
+  .aside {
+    left: -270px;
+    z-index: 10;
+  }
+
+  .aside.open {
+    left: 0;
+  }
+
+  /* Show hamburger menu */
+  .aside .nav-toggler {
+    display: flex;
+    left: 30px;
+  }
+
+  .aside .nav-toggler.open {
+    left: 300px;
+  }
+
+  /* Main content full width */
+  .main-content {
+    padding-left: 0;
+  }
+
+  .section {
+    left: 0;
+    padding: 0 20px;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  /* About Section */
+  .about .about-content .personal-info .info-item p span {
+    display: block;
+    margin-left: 0;
+  }
+
+  /* Section titles */
+  .section-title h2 {
+    font-size: 36px;
+  }
+
+  /* Home Section */
+  .home .home-info h3.hello {
+    font-size: 26px;
+  }
+
+  .home .home-info h3.my-profession {
+    font-size: 32px;
+  }
+
+  /* Skills Section */
+  .skills-modern {
+    gap: 20px;
+  }
+
+  .skill-group {
+    flex: 0 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+}
+
+/* ========================================
+   TABLET LANDSCAPE (768px - 991px)
+   ======================================== */
+@media (max-width: 991px) {
+  /* Section padding */
+  .section {
+    padding: 0 15px;
+  }
+
+  .section .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  /* Portfolio - 2 columns */
+  .portfolio .portfolio-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* Contact Section */
+  .contact .contact-info-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  /* Home Section */
+  .home .home-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .home .home-img {
+    display: none;
+  }
+
+  .home .home-info h3.hello {
+    font-size: 24px;
+  }
+
+  .home .home-info h3.my-profession {
+    font-size: 28px;
+  }
+
+  .home .home-info p {
+    font-size: 15px;
+  }
+
+  .home .btn {
+    margin: 10px 5px;
+  }
+
+  /* Skills Section */
+  .skill-group {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .skills-achievements {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .achievement-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* About Section */
+  .about .about-content .about-text h3 {
+    font-size: 22px;
+  }
+
+  .about .about-content .about-text p {
+    font-size: 15px;
+  }
+
+  /* Section titles */
+  .section-title h2 {
+    font-size: 32px;
+  }
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  /* Floating Action Buttons */
+  .floating-action-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+    bottom: 25px;
+    right: 25px;
+  }
+
+  .fab-label {
+    font-size: 13px;
+    padding: 8px 16px;
+    right: 65px;
+  }
+}
+
+/* ========================================
+   TABLET PORTRAIT (576px - 767px)
+   ======================================== */
+@media (max-width: 767px) {
+  /* Section padding */
+  .section {
+    padding: 0 10px;
+  }
+
+  .section .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  /* All items full width */
+  .contact .contact-form .col-6,
+  .contact .contact-info-item,
+  .portfolio .portfolio-item,
+  .service .service-item,
+  .about .about-content .experience,
+  .about .about-content .education,
+  .about .about-content .skills,
+  .about .about-content .personal-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  /* Section titles */
+  .section-title h2 {
+    font-size: 28px;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  /* Home Section */
+  .home .home-info h3.hello {
+    font-size: 22px;
+  }
+
+  .home .home-info h3.my-profession {
+    font-size: 24px;
+  }
+
+  .home .home-info p {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .home .btn {
+    font-size: 14px;
+    padding: 10px 25px;
+    margin: 8px 4px;
+  }
+
+  /* About Section */
+  .about .about-content .about-text h3 {
+    font-size: 20px;
+  }
+
+  .about .about-content .personal-info .info-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .about .about-content .personal-info .info-item p {
+    font-size: 15px;
+  }
+
+  .about .about-content .timeline .timeline-item {
+    padding-left: 30px;
+  }
+
+  .about .about-content .timeline .timeline-item::before {
+    left: 5px;
+  }
+
+  /* Skills Section */
+  .skill-tag {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .skill-group-header h3 {
+    font-size: 18px;
+  }
+
+  .achievement-card h4 {
+    font-size: 32px;
+  }
+
+  .achievement-card p {
+    font-size: 15px;
+  }
+
+  /* Portfolio Section */
+  .portfolio .portfolio-heading h2 {
+    font-size: 26px;
+  }
+
+  .portfolio-item-inner:hover {
+    transform: translateY(-8px);
+  }
+
+  .external-metadata {
+    min-width: 280px;
+    max-width: 320px;
+    padding: 20px;
+    margin: 0 20px;
+  }
+
+  .metadata-preview-title {
+    font-size: 20px;
+  }
+
+  .view-details-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  /* Contact Section */
+  .contact .contact-form {
+    padding: 25px;
+  }
+
+  .contact .contact-form .form-item .form-control {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+
+  .contact .contact-info-item {
+    margin-bottom: 20px;
+  }
+
+  .contact .contact-info-item .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Project Manager */
+  .project-manager .add-project-form {
+    padding: 25px;
+  }
+
+  .project-manager .form-group {
+    margin-bottom: 20px;
+  }
+
+  /* CV Manager */
+  .cv-upload-box {
+    padding: 25px;
+  }
+
+  /* Floating Action Buttons */
+  .floating-action-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    bottom: 80px;
+    right: 20px;
+  }
+
+  .fab-label {
+    display: none;
+  }
+
+  /* Sidebar */
+  .aside {
+    width: 250px;
+    left: -250px;
+  }
+
+  .aside.open {
+    left: 0;
+  }
+
+  .aside .nav-toggler.open {
+    left: 270px;
+  }
+
+  .aside .logo a {
+    font-size: 28px;
+  }
+
+  .aside .nav li a {
+    font-size: 15px;
+  }
+}
+
+/* ========================================
+   MOBILE (320px - 575px)
+   ======================================== */
+@media (max-width: 575px) {
+  /* Section padding */
+  .section {
+    padding: 0 8px;
+  }
+
+  .section .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .padd-15 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Section titles */
+  .section-title h2 {
+    font-size: 24px;
+  }
+
+  .section-title {
+    margin-bottom: 25px;
+  }
+
+  /* Home Section */
+  .home .home-info h3.hello {
+    font-size: 18px;
+  }
+
+  .home .home-info h3.my-profession {
+    font-size: 20px;
+  }
+
+  .home .home-info p {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .home .btn {
+    font-size: 13px;
+    padding: 8px 20px;
+    margin: 6px 3px;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Social links */
+  .home .social-links a {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  /* About Section */
+  .about .about-content .about-text h3 {
+    font-size: 18px;
+  }
+
+  .about .about-content .about-text p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .about .about-content .personal-info .info-item p {
+    font-size: 14px;
+  }
+
+  .about .about-content .personal-info .buttons {
+    flex-direction: column;
+  }
+
+  .about .about-content .personal-info .buttons .btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .about .about-content .timeline .timeline-item {
+    padding-left: 25px;
+  }
+
+  .about .about-content .timeline .timeline-item .timeline-title {
+    font-size: 16px;
+  }
+
+  .about .about-content .timeline .timeline-item .timeline-text {
+    font-size: 13px;
+  }
+
+  /* Skills Section */
+  .skill-tag {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .skill-group-header h3 {
+    font-size: 16px;
+  }
+
+  .skill-group-header i {
+    font-size: 20px;
+  }
+
+  .achievement-card {
+    padding: 20px;
+  }
+
+  .achievement-card h4 {
+    font-size: 28px;
+  }
+
+  .achievement-card p {
+    font-size: 14px;
+  }
+
+  .achievement-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  /* Portfolio Section */
+  .portfolio .portfolio-heading h2 {
+    font-size: 22px;
+  }
+
+  .portfolio .portfolio-item {
+    margin-bottom: 20px;
+  }
+
+  .portfolio-item-inner:hover {
+    transform: translateY(-5px);
+  }
+
+  .external-metadata {
+    min-width: 260px;
+    max-width: 300px;
+    padding: 15px;
+    margin: 0 15px;
+  }
+
+  .external-metadata .metadata-title {
+    font-size: 20px;
+  }
+
+  .external-metadata .metadata-description {
+    font-size: 13px;
+  }
+
+  .external-metadata .btn-link {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .tech-tag {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+
+  .metadata-preview-title {
+    font-size: 18px;
+  }
+
+  .metadata-preview-text {
+    font-size: 13px;
+  }
+
+  .view-details-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  /* Contact Section */
+  .contact .contact-title h2 {
+    font-size: 22px;
+  }
+
+  .contact .contact-form {
+    padding: 20px;
+  }
+
+  .contact .contact-form .form-item .form-control {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .contact .contact-form .btn {
+    width: 100%;
+  }
+
+  .contact .contact-info-item {
+    padding: 15px;
+  }
+
+  .contact .contact-info-item .icon {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .contact .contact-info-item h4 {
+    font-size: 16px;
+  }
+
+  .contact .contact-info-item p {
+    font-size: 13px;
+  }
+
+  /* Project Manager */
+  .auth-box {
+    max-width: 100%;
+    padding: 25px;
+  }
+
+  .project-manager .add-project-form {
+    padding: 20px;
+  }
+
+  .project-manager .form-control {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .project-list-item {
+    padding: 15px;
+  }
+
+  .btn-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  /* CV Manager */
+  .cv-upload-box {
+    padding: 20px;
+  }
+
+  .cv-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cv-icon-large {
+    margin-bottom: 15px;
+  }
+
+  .cv-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Floating Action Buttons */
+  .floating-action-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+    bottom: 70px;
+    right: 15px;
+  }
+
+  /* Sidebar */
+  .aside {
+    width: 220px;
+    left: -220px;
+  }
+
+  .aside.open {
+    left: 0;
+  }
+
+  .aside .nav-toggler.open {
+    left: 240px;
+  }
+
+  .aside .logo {
+    padding: 20px 15px;
+  }
+
+  .aside .logo a {
+    font-size: 24px;
+  }
+
+  .aside .nav {
+    margin-top: 30px;
+  }
+
+  .aside .nav li {
+    margin-bottom: 15px;
+  }
+
+  .aside .nav li a {
+    font-size: 14px;
+    padding: 8px 30px;
+  }
+}
+
+/* ========================================
+   EXTRA SMALL MOBILE (max-width: 375px)
+   ======================================== */
+@media (max-width: 375px) {
+  .section-title h2 {
+    font-size: 20px;
+  }
+
+  .home .home-info h3.hello {
+    font-size: 16px;
+  }
+
+  .home .home-info h3.my-profession {
+    font-size: 18px;
+  }
+
+  .home .btn {
+    font-size: 12px;
+    padding: 7px 18px;
+  }
+
+  .skill-tag {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+
+  .achievement-card h4 {
+    font-size: 24px;
+  }
+
+  .external-metadata {
+    min-width: 240px;
+    max-width: 280px;
+  }
+}
+
+/* ========================================
+   LANDSCAPE MODE FIXES
+   ======================================== */
+@media (max-height: 600px) and (orientation: landscape) {
+  .section .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .home .home-info h3.hello {
+    font-size: 20px;
+  }
+
+  .home .home-info h3.my-profession {
+    font-size: 24px;
+  }
+
+  .home .home-info p {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+  .section-title {
+    margin-bottom: 20px;
+  }
+
+  .about .about-content .timeline .timeline-item {
+    margin-bottom: 20px;
+  }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+@media print {
+  .aside,
+  .floating-action-btn,
+  .style-switcher,
+  #scrollToTop {
+    display: none !important;
+  }
+
+  .section {
+    position: static;
+    left: 0;
+    padding: 0;
+  }
+
+  .section .container {
+    padding: 20px 0;
+  }
+
+  * {
+    background: white !important;
+    color: black !important;
+  }
+}

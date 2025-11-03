@@ -31,6 +31,8 @@ function initializeMainScriptFeatures() {
     if (target) {
       target.classList.add("active");
       currentSection = targetSection;
+      // Save current section to localStorage for persistence
+      localStorage.setItem("currentSection", targetSection);
     }
   }
 
@@ -79,9 +81,21 @@ function initializeMainScriptFeatures() {
     });
   }
 
-  // Initialize - show home section by default
-  showSection("home");
-  updateActiveNavLink("home");
+  // Initialize - restore last active section or show home
+  const lastSection =
+    localStorage.getItem("currentSection") ||
+    window.location.hash.substring(1) ||
+    "home";
+  const sectionToShow = document.getElementById(lastSection)
+    ? lastSection
+    : "home";
+  showSection(sectionToShow);
+  updateActiveNavLink(sectionToShow);
+
+  // Update hash without triggering reload
+  if (sectionToShow !== "home") {
+    window.history.replaceState(null, null, `#${sectionToShow}`);
+  }
 
   // Handle browser back/forward
   window.addEventListener("hashchange", function () {
@@ -89,6 +103,11 @@ function initializeMainScriptFeatures() {
     if (hash && document.getElementById(hash)) {
       showSection(hash);
       updateActiveNavLink(hash);
+    } else if (!hash) {
+      // If hash is removed, go to last saved section or home
+      const savedSection = localStorage.getItem("currentSection") || "home";
+      showSection(savedSection);
+      updateActiveNavLink(savedSection);
     }
   });
 }

@@ -1,0 +1,374 @@
+/* ===== Project Manager Styles ===== */
+
+/* Authentication Screen */
+.auth-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  padding: 40px 0;
+}
+
+.auth-box {
+  background: var(--bg-black-100);
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid var(--bg-black-50);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.auth-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: linear-gradient(
+    135deg,
+    var(--skin-color),
+    var(--skin-color-hover)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  color: #fff;
+}
+
+.auth-box h3 {
+  color: var(--text-black-900);
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.auth-box p {
+  color: var(--text-black-700);
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border: 1px solid var(--bg-black-50);
+  border-radius: 8px;
+  background: var(--bg-black-900);
+  color: var(--text-black-900);
+  font-size: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: var(--skin-color);
+  box-shadow: 0 0 10px rgba(236, 24, 57, 0.2);
+}
+
+.auth-form button {
+  width: 100%;
+}
+
+.auth-error {
+  color: #e74c3c;
+  background: rgba(231, 76, 60, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.btn-secondary {
+  background: var(--bg-black-100);
+  color: var(--text-black-900);
+  border: 1px solid var(--bg-black-50);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-black-50);
+  color: var(--text-black-900);
+}
+
+/* Form Container */
+.project-form-container {
+  width: 100%;
+  max-width: 100%;
+}
+
+.project-form {
+  background: var(--bg-black-100);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid var(--bg-black-50);
+}
+
+.project-form h3 {
+  color: var(--text-black-900);
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+/* Form Layout */
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: var(--text-black-900);
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.form-group small {
+  display: block;
+  color: var(--text-black-700);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  background: var(--bg-black-900);
+  border: 1px solid var(--bg-black-50);
+  border-radius: 5px;
+  color: var(--text-black-900);
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--skin-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(236, 24, 57, 0.1);
+}
+
+.form-control::placeholder {
+  color: var(--text-black-700);
+  opacity: 0.6;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+select.form-control {
+  cursor: pointer;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.form-actions .btn {
+  flex: 1;
+}
+
+/* Messages */
+.project-message {
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.project-message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.project-message::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.project-message.success::before {
+  content: "\f058"; /* check-circle */
+}
+
+.project-message.error::before {
+  content: "\f06a"; /* exclamation-circle */
+}
+
+/* Project List */
+.project-list-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.project-list-inner {
+  background: var(--bg-black-100);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.project-list-inner:hover {
+  transform: translateY(-5px);
+}
+
+.project-list-info h4 {
+  color: var(--text-black-900);
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.project-list-info p {
+  color: var(--text-black-700);
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.project-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--bg-black-50);
+  color: var(--text-black-900);
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.project-list-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: var(--bg-black-50);
+  color: var(--text-black-900);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.btn-icon:hover {
+  background: var(--skin-color);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.btn-icon.btn-danger:hover {
+  background: #dc3545;
+}
+
+/* Project Status Badge */
+.project-status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+.status-completed {
+  background: #28a745;
+  color: #fff;
+}
+
+.status-in-progress {
+  background: #ffc107;
+  color: #000;
+}
+
+.status-planned {
+  background: #17a2b8;
+  color: #fff;
+}
+
+/* Project Modal - Now using original external-metadata design from style.css */
+/* Custom modal styles removed to use the original portfolio modal design */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .project-list-inner {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .project-list-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+}
+
+/* Dark mode adjustments */
+body.dark .project-message.success {
+  background: rgba(40, 167, 69, 0.2);
+  color: #80e5a0;
+  border-color: rgba(40, 167, 69, 0.3);
+}
+
+body.dark .project-message.error {
+  background: rgba(220, 53, 69, 0.2);
+  color: #ff8a9a;
+  border-color: rgba(220, 53, 69, 0.3);
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
