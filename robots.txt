@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fsrakib.github.io/Portfolio/sitemap.xml

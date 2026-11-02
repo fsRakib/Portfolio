@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Md. Rakibul Kabir — Software Engineer</title>
+  <meta name="description" content="Software Engineer (SUST) building backend systems, geospatial services and AI-driven applications. Go, TypeScript, PostgreSQL, LLMs." />
+  <meta name="author" content="Md. Rakibul Kabir" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Md. Rakibul Kabir — Software Engineer" />
+  <meta property="og:description" content="Backend, geospatial and AI-driven applications. Currently at Foodi Express Limited." />
+  <meta property="og:image" content="images/hero.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    try {
+      var t = localStorage.getItem("theme");
+      if (!t) t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Md. Rakibul Kabir",
+      "jobTitle": "Junior Software Engineer",
+      "worksFor": { "@type": "Organization", "name": "Foodi Express Limited" },
+      "email": "fsrakiba50@gmail.com",
+      "address": { "@type": "PostalAddress", "addressLocality": "Dhaka", "addressCountry": "BD" },
+      "alumniOf": "Shahjalal University of Science and Technology",
+      "sameAs": ["https://github.com/fsRakib", "https://linkedin.com/in/md-rakibul-kabir"]
+    }
+  </script>
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span>
+  </div>
+
+  <header class="nav-wrap">
+    <nav class="nav glass" aria-label="Primary">
+      <a href="#home" class="brand">rk<span>.</span></a>
+      <ul class="links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme" class="icon-btn" aria-label="Toggle theme">
+        <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero container">
+      <div class="hero-copy reveal">
+        <div class="who">
+          <img class="avatar" src="images/hero.jpg" alt="Md. Rakibul Kabir" />
+          <p class="status glass"><i class="dot"></i> Open to opportunities</p>
+        </div>
+        <p class="prompt mono">&gt; hello_world<span class="caret">_</span></p>
+        <h1>I'm Md. Rakibul <span class="grad">Kabir</span></h1>
+        <p class="role mono"><span class="muted">const role =</span> <span id="typed" class="typed">Backend Engineer</span><span class="caret">|</span></p>
+        <p class="lead">
+          Software engineer at Foodi Express building real-time ETA and geospatial services
+          in Go. I design APIs, ship distributed systems and put LLMs to work in real products.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Hire me</a>
+          <a class="btn glass" id="cv-link" href="CV.pdf" download>Download CV</a>
+          <a class="btn glass" href="https://github.com/fsRakib" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+        <ul class="socials">
+          <li><a href="https://linkedin.com/in/md-rakibul-kabir" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://codeforces.com/profile/fsRakib" target="_blank" rel="noopener">Codeforces</a></li>
+          <li><a href="https://leetcode.com/u/fsRakib/" target="_blank" rel="noopener">LeetCode</a></li>
+        </ul>
+      </div>
+
+      <div class="editor glass reveal" aria-label="Profile as code">
+        <div class="ed-bar">
+          <i></i><i></i><i></i>
+          <span class="mono">rakib.go</span>
+        </div>
+<pre class="code"><code><span class="c">// who am i</span>
+<span class="k">type</span> <span class="t">Engineer</span> <span class="k">struct</span> {
+  Name       <span class="t">string</span>
+  Role       <span class="t">string</span>
+  Company    <span class="t">string</span>
+  Stack      []<span class="t">string</span>
+  Building   []<span class="t">string</span>
+  OpenToWork <span class="t">bool</span>
+}
+
+<span class="k">var</span> me = <span class="t">Engineer</span>{
+  Name:    <span class="s">"Md. Rakibul Kabir"</span>,
+  Role:    <span class="s">"Software Engineer"</span>,
+  Company: <span class="s">"Foodi Express"</span>,
+  Stack: []<span class="t">string</span>{
+    <span class="s">"Go"</span>, <span class="s">"TypeScript"</span>, <span class="s">"PostgreSQL"</span>,
+    <span class="s">"gRPC"</span>, <span class="s">"Redis"</span>, <span class="s">"Docker"</span>,
+  },
+  Building: []<span class="t">string</span>{
+    <span class="s">"real-time Trip ETA"</span>,
+    <span class="s">"geospatial routing (OSRM)"</span>,
+    <span class="s">"LLM / RAG apps"</span>,
+  },
+  OpenToWork: <span class="k">true</span>,
+}</code></pre>
+      </div>
+    </section>
+
+    <section class="container stats">
+      <div class="stat glass reveal"><b>1000s</b><span>daily users served by ETA services</span></div>
+      <div class="stat glass reveal"><b>150+</b><span>API connectors built</span></div>
+      <div class="stat glass reveal"><b>600+</b><span>problems solved (CP)</span></div>
+      <div class="stat glass reveal"><b>3</b><span>engineering roles in a year</span></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="container section">
+      <h2 class="sec-title reveal"><span>01 //</span> About</h2>
+      <div class="about-grid">
+        <div class="glass card reveal">
+          <p>
+            Software Engineering graduate from SUST with hands-on experience in full-stack
+            development, backend systems and AI-driven applications. Strong foundation in API
+            design, databases, distributed systems and problem solving. I learn fast and enjoy
+            shipping real-world products used at scale.
+          </p>
+          <p class="muted">
+            Day to day I work on real-time ETA microservices, routing engines and geospatial queries.
+          </p>
+        </div>
+        <div class="glass card edu reveal">
+          <span class="tag">Education</span>
+          <h3>B.Sc. in Software Engineering</h3>
+          <p>Shahjalal University of Science and Technology, Sylhet</p>
+          <p class="mono muted">Mar 2022 – Nov 2025 · CGPA 3.50 / 4.00</p>
+          <hr />
+          <span class="tag">Location</span>
+          <p>Uttara, Dhaka, Bangladesh</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="container section">
+      <h2 class="sec-title reveal"><span>02 //</span> Experience</h2>
+      <div class="timeline">
+        <article class="glass card job reveal">
+          <header>
+            <div>
+              <h3>Junior Software Engineer</h3>
+              <a href="https://foodibd.com/" target="_blank" rel="noopener">Foodi Express Limited</a>
+              <span class="muted"> · Dhaka · Tech-Map Department</span>
+            </div>
+            <span class="date mono">Jun 2026 – Present</span>
+          </header>
+          <ul>
+            <li>Engineered real-time Trip ETA microservices and geospatial data queries to optimize delivery routing accuracy for thousands of daily active users.</li>
+          </ul>
+        </article>
+
+        <article class="glass card job reveal">
+          <header>
+            <div>
+              <h3>Junior Software Engineer</h3>
+              <a href="https://technonext.com/" target="_blank" rel="noopener">TechnoNext Software Limited</a>
+              <span class="muted"> · Dhaka · RND &amp; Innovation</span>
+            </div>
+            <span class="date mono">Feb 2026 – Jun 2026</span>
+          </header>
+          <ul>
+            <li>Developed an ETA service for BD routing, enabling more accurate travel-time estimation.</li>
+            <li>Integrated the OSRM engine and services like routing and distance matrix to support geospatial features.</li>
+            <li>Configured routes, services and upstreams in Apache APISIX to support API gateway traffic.</li>
+          </ul>
+        </article>
+
+        <article class="glass card job reveal">
+          <header>
+            <div>
+              <h3>Full Stack Software Engineer – Gen AI <small>(Intern)</small></h3>
+              <a href="https://www.flowgenx.ai/" target="_blank" rel="noopener">FlowGenX AI</a>
+              <span class="muted"> · San Francisco, USA (Remote) · Connectivity Team</span>
+            </div>
+            <span class="date mono">Oct 2025 – Feb 2026</span>
+          </header>
+          <ul>
+            <li>Built 150+ runtime connectors, enabling seamless integration with third-party APIs and services.</li>
+            <li>Developed workflow automation for iPaaS so businesses can automate routine tasks.</li>
+            <li>Worked on connector architecture, API/webhook integrations and authentication flows including OAuth.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="container section">
+      <h2 class="sec-title reveal"><span>03 //</span> Projects</h2>
+      <div class="grid">
+        <article class="glass card project reveal">
+          <div class="p-head">
+            <h3>Niye Jao <small>Ride Sharing</small></h3>
+            <a class="arrow" href="https://www.niyejao.app/" target="_blank" rel="noopener" aria-label="Live demo of Niye Jao">↗</a>
+          </div>
+          <p>Location-aware ride-sharing backend in Go microservices with geospatial rider matching via PostGIS and road-network routing with OSRM. Concurrent seat booking, ride lifecycle state, idempotent operations, rate limiting and distributed tracing (OpenTelemetry, Prometheus, Grafana, Loki, Tempo).</p>
+          <ul class="chips"><li>Go</li><li>PostgreSQL</li><li>PostGIS</li><li>OSRM</li><li>Redis</li><li>OpenTelemetry</li></ul>
+        </article>
+
+        <article class="glass card project reveal">
+          <div class="p-head">
+            <h3>Effective Learning</h3>
+            <span class="links-mini">
+              <a href="https://github.com/Farzine/Effective-Learning" target="_blank" rel="noopener">Code</a>
+              <a class="arrow" href="https://effective-learning-nu.vercel.app/" target="_blank" rel="noopener" aria-label="Live demo of Effective Learning">↗</a>
+            </span>
+          </div>
+          <p>C/C++ programming learning platform that uses LLMs for interactive learning assistance. OpenAI API for user queries, NextAuth.js with Mongoose for auth and user data.</p>
+          <ul class="chips"><li>Next.js</li><li>TypeScript</li><li>ShadCN</li><li>OpenAI SDK</li><li>MongoDB</li></ul>
+        </article>
+
+        <article class="glass card project reveal">
+          <div class="p-head">
+            <h3>Order Tracking System</h3>
+            <a class="arrow" href="https://github.com/fsRakib/order-tracking-system" target="_blank" rel="noopener" aria-label="Order Tracking System on GitHub">↗</a>
+          </div>
+          <p>Microservices system with 3 services communicating over gRPC and RabbitMQ. Elasticsearch powers full-text search and real-time analytics in the Analytics service.</p>
+          <ul class="chips"><li>Go</li><li>gRPC</li><li>PostgreSQL</li><li>Elasticsearch</li><li>DDD</li></ul>
+        </article>
+
+        <article class="glass card project reveal">
+          <div class="p-head">
+            <h3>AI Notes</h3>
+            <span class="links-mini">
+              <a href="https://github.com/fsRakib/ai_notes" target="_blank" rel="noopener">Code</a>
+              <a class="arrow" href="https://ai-notes-app-bec3hbg4a8crfuak.westindia-01.azurewebsites.net/" target="_blank" rel="noopener" aria-label="Live demo of AI Notes">↗</a>
+            </span>
+          </div>
+          <p>AI-powered editor for creating notes and answering questions from PDFs using a RAG pipeline, with real-time collaboration and co-editing through Liveblocks.</p>
+          <ul class="chips"><li>Next.js</li><li>LangChain</li><li>Liveblocks</li><li>Gemini API</li><li>Tiptap</li><li>Convex</li></ul>
+        </article>
+      </div>
+
+      <h3 class="sub-title reveal">More projects</h3>
+      <div class="grid mini-grid">
+        <article class="glass card project mini reveal">
+          <div class="p-head"><h3>Campus Media</h3><span class="links-mini"><a href="https://github.com/fsRakib/Campus-Media.git" target="_blank" rel="noopener">Code</a><a href="https://campus-media-backend.vercel.app/" target="_blank" rel="noopener">Live</a></span></div>
+          <p>Campus-exclusive social platform: follow friends, post to a feed and use a chatbot. Redux state, custom hooks, industry-style controllers.</p>
+          <ul class="chips"><li>React</li><li>Node.js</li><li>Express</li><li>Redux</li><li>MongoDB</li><li>Cloudinary</li></ul>
+        </article>
+        <article class="glass card project mini reveal">
+          <div class="p-head"><h3>University Resource Manager</h3><span class="links-mini"><a href="https://github.com/fsRakib/university-academic-resource-manager.git" target="_blank" rel="noopener">Code</a><a href="https://university-academic-resource-manage.vercel.app/" target="_blank" rel="noopener">Live</a></span></div>
+          <p>University resource hub with REST API, Cloudinary storage, dynamic routing, Context API, and admin, auth and profile modules.</p>
+          <ul class="chips"><li>Next.js</li><li>MongoDB</li><li>Cloudinary</li><li>NextAuth</li></ul>
+        </article>
+        <article class="glass card project mini reveal">
+          <div class="p-head"><h3>Appointment System</h3><span class="links-mini"><a href="https://github.com/fsRakib/appointment_system.git" target="_blank" rel="noopener">Code</a><a href="https://appointment-system-ruddy-eight.vercel.app/" target="_blank" rel="noopener">Live</a></span></div>
+          <p>Doctor appointment booking system.</p>
+          <ul class="chips"><li>Next.js</li><li>JavaScript</li><li>MongoDB</li></ul>
+        </article>
+        <article class="glass card project mini reveal">
+          <div class="p-head"><h3>Hospital Management System</h3><span class="links-mini"><a href="https://github.com/fsRakib/Hospital-Management-System.git" target="_blank" rel="noopener">Code</a></span></div>
+          <p>Healthcare management system for patient records and appointment scheduling.</p>
+          <ul class="chips"><li>React</li><li>SQL</li><li>Tailwind</li><li>Express</li><li>Node.js</li></ul>
+        </article>
+        <article class="glass card project mini reveal">
+          <div class="p-head"><h3>SMS Spam Classification</h3><span class="links-mini"><a href="https://github.com/fsRakib/ML-lab.git" target="_blank" rel="noopener">Code</a></span></div>
+          <p>Machine-learning SMS spam classifier with a Streamlit interface.</p>
+          <ul class="chips"><li>Streamlit</li><li>scikit-learn</li><li>pandas</li><li>NumPy</li><li>matplotlib</li></ul>
+        </article>
+        <article class="glass card project mini reveal">
+          <div class="p-head"><h3>Energy Demand Forecasting</h3><span class="links-mini"><a href="https://github.com/fsRakib/Energy-Demand-Forecasting.git" target="_blank" rel="noopener">Code</a></span></div>
+          <p>Time-series forecasting of energy demand from historical consumption data.</p>
+          <ul class="chips"><li>Python</li><li>scikit-learn</li><li>pandas</li><li>NumPy</li><li>matplotlib</li></ul>
+        </article>
+        <article class="glass card project mini reveal">
+          <div class="p-head"><h3>Visual Chat</h3><span class="links-mini"><a href="https://github.com/fsRakib/Visual_Chat.git" target="_blank" rel="noopener">Code</a></span></div>
+          <p>Real-time video chat app with video calls via the Zego Cloud API.</p>
+          <ul class="chips"><li>Java</li><li>Zego Cloud API</li></ul>
+        </article>
+        <article class="glass card project mini reveal">
+          <div class="p-head"><h3>Campus Connect</h3><span class="links-mini"><a href="https://github.com/fsRakib/Campus_Connect.git" target="_blank" rel="noopener">Code</a></span></div>
+          <p>Chat platform connecting students, faculty and staff, with event management, academic resource sharing and campus news.</p>
+          <ul class="chips"><li>Java</li><li>Firebase</li><li>Firestore</li></ul>
+        </article>
+        <article class="glass card project mini reveal">
+          <div class="p-head"><h3>Chat App with Socket.io</h3><span class="links-mini"><a href="https://github.com/fsRakib/Chat-Socket-VS.git" target="_blank" rel="noopener">Code</a></span></div>
+          <p>Real-time messaging with instant delivery and online status.</p>
+          <ul class="chips"><li>Socket.io</li><li>Java</li><li>Express</li><li>SQL</li></ul>
+        </article>
+        <article class="glass card project mini reveal">
+          <div class="p-head"><h3>Car Driving Game</h3><span class="links-mini"><a href="https://github.com/fsRakib/Game-Project-SWE-.git" target="_blank" rel="noopener">Code</a></span></div>
+          <p>Car racing game with physics, multiple tracks, vehicle options, collision detection and smooth controls.</p>
+          <ul class="chips"><li>C++</li><li>SFML</li></ul>
+        </article>
+        <article class="glass card project mini reveal">
+          <div class="p-head"><h3>YouTube Clone</h3><span class="links-mini"><a href="https://github.com/fsRakib/YouTube.git" target="_blank" rel="noopener">Code</a></span></div>
+          <p>Video streaming platform replica with responsive design and player controls.</p>
+          <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+        </article>
+        <article class="glass card project mini reveal">
+          <div class="p-head"><h3>Portfolio Website</h3><span class="links-mini"><a href="https://github.com/fsRakib/Portfolio.git" target="_blank" rel="noopener">Code</a><a href="https://fsrakib.github.io/Portfolio/" target="_blank" rel="noopener">Live</a></span></div>
+          <p>Responsive personal portfolio with animations and theme switching.</p>
+          <ul class="chips"><li>HTML5</li><li>CSS3</li><li>JavaScript</li></ul>
+        </article>
+      </div>
+
+      <div id="custom-wrap" hidden>
+        <h3 class="sub-title">Added by you</h3>
+        <div id="custom-projects" class="grid mini-grid"></div>
+      </div>
+
+      <div class="glass card other reveal">
+        <span class="tag">Other</span>
+        <p><b>Research on Prompting Techniques</b> <span class="muted">(ongoing)</span> — analysing Few-Shot and CoT prompting under an IICT faculty advisor to improve student learning.</p>
+        <p><b>Programs &amp; events</b> — participated in UIHP and PDS EDGE; contributed to Technovent.</p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="container section">
+      <h2 class="sec-title reveal"><span>04 //</span> Skills</h2>
+      <div class="skills glass card reveal">
+        <div class="row"><h4>Languages</h4><ul class="chips"><li>Go</li><li>C++</li><li>Python</li><li>Java</li><li>JavaScript</li><li>TypeScript</li></ul></div>
+        <div class="row"><h4>Frontend</h4><ul class="chips"><li>React</li><li>Next.js</li><li>Tailwind CSS</li></ul></div>
+        <div class="row"><h4>Backend &amp; APIs</h4><ul class="chips"><li>Node.js</li><li>FastAPI</li><li>REST</li><li>gRPC</li></ul></div>
+        <div class="row"><h4>AI</h4><ul class="chips"><li>LLMs</li><li>RAG</li><li>LangChain</li><li>MCP</li><li>Prompt Engineering</li></ul></div>
+        <div class="row"><h4>Databases</h4><ul class="chips"><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li></ul></div>
+        <div class="row"><h4>Systems &amp; Tools</h4><ul class="chips"><li>Grafana</li><li>RabbitMQ</li><li>Elasticsearch</li><li>Docker</li><li>Linux</li><li>Git</li><li>Apache APISIX</li></ul></div>
+        <div class="row"><h4>Problem solving</h4><ul class="chips"><li>600+ problems solved on competitive programming platforms</li></ul></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container section">
+      <div class="glass contact reveal">
+        <h2>Let’s build something.</h2>
+        <p class="muted">Open to opportunities and interesting problems. The inbox is always open.</p>
+        <div class="cta center">
+          <a class="btn primary" href="mailto:fsrakiba50@gmail.com">fsrakiba50@gmail.com</a>
+          <a class="btn glass" href="tel:+8801518335977">+880 1518 335977</a>
+        </div>
+        <ul class="contact-extra">
+          <li><span>Edu mail</span><a href="mailto:rakibul51@student.sust.edu">rakibul51@student.sust.edu</a></li>
+          <li><span>WhatsApp</span><a href="https://wa.me/8801888166570" target="_blank" rel="noopener">+880 1888 166570</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container foot">
+    <span>© <span id="yr"></span> Md. Rakibul Kabir</span>
+    <span><button type="button" class="linkish" id="open-admin">Manage</button> · <a href="#home">Back to top ↑</a></span>
+  </footer>
+
+  <dialog id="admin" class="glass admin">
+    <header class="a-head">
+      <h3>Manage portfolio</h3>
+      <button class="icon-btn" id="close-admin" aria-label="Close">✕</button>
+    </header>
+
+    <form id="lock" class="lock">
+      <p class="muted">Enter the admin password to add projects or replace your CV.</p>
+      <input type="password" id="pw" placeholder="Password" autocomplete="off" required />
+      <button class="btn primary" type="submit">Unlock</button>
+      <p class="err" id="lock-err" hidden>Incorrect password.</p>
+    </form>
+
+    <div id="panel" hidden>
+      <div class="tabs" role="tablist">
+        <button class="tab on" data-tab="t-projects" type="button">Projects</button>
+        <button class="tab" data-tab="t-cv" type="button">CV</button>
+        <button class="tab" id="logout" type="button">Lock</button>
+      </div>
+      <p class="note" id="note" hidden></p>
+
+      <div id="t-projects" class="tabpane">
+        <form id="proj-form" class="form">
+          <div class="two">
+            <label>Title *<input name="title" required placeholder="e.g. AI Notes" /></label>
+            <label>Tech (comma separated)<input name="tech" placeholder="Go, PostgreSQL, Redis" /></label>
+          </div>
+          <label>Description *<textarea name="desc" rows="3" required placeholder="One or two sentences"></textarea></label>
+          <div class="two">
+            <label>GitHub URL<input name="github" type="url" placeholder="https://github.com/…" /></label>
+            <label>Live demo URL<input name="demo" type="url" placeholder="https://…" /></label>
+          </div>
+          <button class="btn primary" type="submit">Add project</button>
+        </form>
+        <div class="row-actions">
+          <button class="btn glass" id="export" type="button">Export JSON</button>
+          <label class="btn glass file">Import JSON<input type="file" id="import" accept=".json" hidden /></label>
+        </div>
+        <ul id="proj-list" class="plist"></ul>
+        <p class="muted small">Projects are saved in this browser only. Use Export to back them up or move them to another device.</p>
+      </div>
+
+      <div id="t-cv" class="tabpane" hidden>
+        <div id="cv-drop" class="drop" tabindex="0">
+          <b>Click or drop a PDF</b><span class="muted">Max 5 MB</span>
+          <input type="file" id="cv-file" accept="application/pdf" hidden />
+        </div>
+        <p id="cv-current" class="muted small"></p>
+        <div class="row-actions">
+          <button class="btn glass" id="cv-reset" type="button">Use default CV</button>
+        </div>
+        <p class="muted small">The “Download CV” button uses the uploaded file in this browser, otherwise <code>CV.pdf</code>. To change it for every visitor, replace <code>CV.pdf</code> in the project.</p>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="js/main.js"></script>
+  <script src="js/manager.js"></script>
+</body>
+</html>
